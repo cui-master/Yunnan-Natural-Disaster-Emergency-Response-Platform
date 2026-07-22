@@ -1,0 +1,12 @@
+spring:
+  config:
+    activate:
+      on-profile: docker
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.nologging.NoLoggingImpl
+
+ai:
+  service:
+    url: http://ai-service:8000
