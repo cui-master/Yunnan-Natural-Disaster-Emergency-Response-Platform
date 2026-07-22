@@ -35,7 +35,7 @@ async function doLogin() {
     ElMessage.success('登录成功')
     router.push('/')
   } catch (e: any) {
-    ElMessage.error(e.response?.data?.message || '登录失败')
+    ElMessage.error(e.message || '登录失败')
   } finally {
     loading.value = false
   }

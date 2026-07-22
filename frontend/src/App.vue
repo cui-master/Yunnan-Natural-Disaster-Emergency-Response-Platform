@@ -21,7 +21,6 @@
 import { useRoute } from 'vue-router'
 import { useAuth } from './stores/auth'
 import { onMounted } from 'vue'
-import { connectWs } from './utils/ws'
 
 const route = useRoute()
 const auth = useAuth()
@@ -29,11 +28,6 @@ const auth = useAuth()
 onMounted(async () => {
   if (auth.token) {
     await auth.fetchMe()
-    connectWs((m) => {
-      if (m.type === 'NEW_INCIDENT' || m.type === 'INCIDENT_STATUS') {
-        window.dispatchEvent(new CustomEvent('incident-update'))
-      }
-    })
   }
 })
 
