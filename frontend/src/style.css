@@ -1,12 +1,395 @@
-* { box-sizing: border-box; }
-body { margin: 0; font-family: -apple-system, 'Microsoft YaHei', sans-serif; background: #f5f7fa; }
-.layout { min-height: 100vh; }
-.topbar { display: flex; align-items: center; gap: 24px; padding: 0 24px; height: 56px; background: #1f2d3d; color: #fff; }
-.topbar .logo { font-weight: 600; font-size: 16px; }
-.topbar nav a { color: #cdd6e0; margin-right: 16px; text-decoration: none; }
-.topbar nav a.router-link-active { color: #409eff; }
-.topbar .user { margin-left: auto; font-size: 14px; }
-.page { padding: 24px; }
-.login-wrap { height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #1f2d3d, #2c5f8a); }
-.login-card { width: 360px; }
-.tip { color: #909399; font-size: 12px; margin-top: 8px; }
+:root {
+  /* 品牌色板（应急红为主强调色，遵循 60-30-10） */
+  --ydr-primary: #e03e2f;
+  --ydr-primary-soft: #fdece9;
+  --ydr-info: #2f80ed;
+  --ydr-warning: #f2994a;
+  --ydr-success: #27ae60;
+  --ydr-purple: #8e44ad;
+
+  /* 中性色：微冷调（品牌色相反方向），避免纯黑纯白，用 OKLCH 表达 */
+  --ydr-ink: oklch(24% 0.02 255);
+  --ydr-text: oklch(38% 0.016 255);
+  --ydr-sub: oklch(56% 0.012 255);
+  --ydr-bg: oklch(97% 0.005 255);
+  --ydr-surface: #ffffff;
+  --ydr-border: oklch(92% 0.006 255);
+  --ydr-border-strong: oklch(86% 0.008 255);
+
+  --ydr-radius: 12px;
+  /* 阴影带品牌冷调，更自然 */
+  --ydr-shadow: 0 6px 20px oklch(24% 0.02 255 / 0.07);
+  --ydr-shadow-lg: 0 14px 34px oklch(24% 0.02 255 / 0.11);
+
+  /* 字体：展示字体（渐进增强）+ 中文系统字体栈 */
+  --font-display: 'Sora', 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+
+  /* 模块化字号（rem，基准 16px） */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.8125rem;
+  --fs-base: 0.9375rem;
+  --fs-md: 1rem;
+  --fs-lg: 1.125rem;
+  --fs-xl: 1.375rem;
+  --fs-2xl: 1.75rem;
+  --fs-display: clamp(2rem, 1.4rem + 2vw, 2.75rem);
+
+  /* 缓动：仅用指数减速，绝不用回弹/弹性 */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Element Plus 主题覆盖（应急红） */
+  --el-color-primary: #e03e2f;
+  --el-color-primary-light-3: #ec6f64;
+  --el-color-primary-light-5: #f29a92;
+  --el-color-primary-light-7: #f8c4be;
+  --el-color-primary-light-8: #fbd9d4;
+  --el-color-primary-light-9: #fdeeeb;
+  --el-color-primary-dark-2: #b33226;
+  --el-color-info: #2f80ed;
+  --el-color-success: #27ae60;
+  --el-color-warning: #f2994a;
+  --el-color-danger: #e03e2f;
+  --el-border-radius-base: 10px;
+  --el-border-radius-small: 8px;
+  --el-bg-color: #ffffff;
+  --el-bg-color-overlay: #ffffff;
+}
+
+/* ============================================================
+   4 角色主题（同设计系统 · 异主题 · 导航形态不同）
+   由 RoleLayout 按角色选择布局，并在根节点加 .theme-<role> 切换：
+   - 横排导航：信息员(青绿浅色) / 指挥员(红·深色指挥风)
+   - 竖排导航：资源管理员(琥珀操作台) / 系统管理员(靛蓝控制台)
+   ============================================================ */
+
+/* —— 指挥员：应急红 / 深蓝指挥风（横排·深色顶栏·冷灰画布） —— */
+.theme-commander {
+  --ydr-primary: #e03e2f;
+  --ydr-primary-soft: #fdece9;
+  --ydr-primary-dark: #b33226;
+  --ydr-bg: oklch(96% 0.008 255);
+  --role-sidebar-bg: linear-gradient(180deg, #0e1b2e 0%, #16263a 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #e03e2f, #f2994a);
+  --role-sidebar-text: #cdd6e3;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --el-color-primary: #e03e2f;
+  --el-color-primary-light-3: #ec6f64;
+  --el-color-primary-light-5: #f29a92;
+  --el-color-primary-light-7: #f8c4be;
+  --el-color-primary-light-8: #fbd9d4;
+  --el-color-primary-light-9: #fdeeeb;
+  --el-color-primary-dark-2: #b33226;
+}
+
+/* —— 信息员：青绿 / 轻量明亮风（横排·浅色顶栏·浅青画布） —— */
+.theme-reporter {
+  --ydr-primary: #0ea5a0;
+  --ydr-primary-soft: #e6f7f6;
+  --ydr-primary-dark: #0b7d79;
+  --ydr-bg: oklch(97% 0.022 175);
+  --role-sidebar-bg: linear-gradient(180deg, #0c2b2a 0%, #10403d 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #0ea5a0, #34d399);
+  --role-sidebar-text: #c8e8e6;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --el-color-primary: #0ea5a0;
+  --el-color-primary-light-3: #4cc1bc;
+  --el-color-primary-light-5: #7fd2ce;
+  --el-color-primary-light-7: #b3e6e3;
+  --el-color-primary-light-8: #cdeeeb;
+  --el-color-primary-light-9: #e6f7f6;
+  --el-color-primary-dark-2: #0b7d79;
+}
+
+/* —— 资源管理员：琥珀 / 操作台风（竖排·琥珀侧栏·浅琥珀画布） —— */
+.theme-resmgr {
+  --ydr-primary: #e08a1e;
+  --ydr-primary-soft: #fdf2e2;
+  --ydr-primary-dark: #b06d12;
+  --ydr-bg: oklch(97% 0.02 75);
+  --role-sidebar-bg: linear-gradient(180deg, #241a0e 0%, #2e2412 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #e08a1e, #f2b705);
+  --role-sidebar-text: #ecdcc2;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --el-color-primary: #e08a1e;
+  --el-color-primary-light-3: #eaa854;
+  --el-color-primary-light-5: #f1c184;
+  --el-color-primary-light-7: #f8dcb3;
+  --el-color-primary-light-8: #fbe8cf;
+  --el-color-primary-light-9: #fdf2e2;
+  --el-color-primary-dark-2: #b06d12;
+}
+
+/* —— 管理员：靛蓝 / 控制台风（竖排·靛蓝侧栏·浅靛画布） —— */
+.theme-admin {
+  --ydr-primary: #4f46e5;
+  --ydr-primary-soft: #eceafe;
+  --ydr-primary-dark: #3f37b8;
+  --ydr-bg: oklch(97% 0.018 280);
+  --role-sidebar-bg: linear-gradient(180deg, #141532 0%, #1d1f47 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #4f46e5, #7c6ff0);
+  --role-sidebar-text: #d3d2f0;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+  --el-color-primary: #4f46e5;
+  --el-color-primary-light-3: #7d76ec;
+  --el-color-primary-light-5: #9a94f1;
+  --el-color-primary-light-7: #c2bef5;
+  --el-color-primary-light-8: #d6d3f8;
+  --el-color-primary-light-9: #eceafe;
+  --el-color-primary-dark-2: #3f37b8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--ydr-bg);
+  color: var(--ydr-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Leaflet 与 Element Plus 浮层 z-index 冲突修复 */
+.leaflet-container {
+  z-index: 1;
+  font-size: 12px;
+}
+.leaflet-pane {
+  z-index: 1;
+}
+.leaflet-tooltip {
+  z-index: 500 !important;
+}
+
+/* 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #cdd4df transparent;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cdd4df;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b3bccb;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* 通用卡片 */
+.page-card {
+  background: var(--ydr-surface);
+  border: 1px solid var(--ydr-border);
+  border-radius: var(--ydr-radius);
+  padding: 18px;
+  box-shadow: var(--ydr-shadow);
+}
+
+/* 区块标题（带强调色竖条） */
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ydr-ink);
+}
+.section-title::before {
+  content: '';
+  width: 4px;
+  height: 15px;
+  border-radius: 2px;
+  background: var(--ydr-primary);
+}
+
+.text-muted {
+  color: var(--ydr-sub);
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.head-sub {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: var(--ydr-sub);
+}
+
+/* 路由切换动画（指数减速，入场略慢、离场更快） */
+/* 路由过渡：仅做透明度淡入淡出，绝不位移/缩放。
+   原因：过渡作用在 RoleLayout 整棵子树（含 Leaflet 地图 + 多个 ECharts），
+   对含地图的子树做 transform 会强制浏览器逐帧重绘瓦片层，导致退出/切换卡顿。 */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition: opacity 0.16s ease;
+}
+.fade-slide-enter-from,
+.fade-slide-leave-to {
+  opacity: 0;
+}
+
+/* 入场上升（用于大屏指标卡错峰） */
+@keyframes ydr-rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* 展示字体工具类（大号数字 / 标题） */
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: 'tnum' 1;
+  letter-spacing: -0.01em;
+}
+
+/* 无障碍：尊重 prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ===== 地图标点（Leaflet 动态节点，需全局样式） ===== */
+.ydr-marker {
+  background: transparent;
+  border: none;
+}
+.ydr-pin {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid #fff;
+}
+.ydr-pin > span {
+  transform: rotate(45deg);
+  font-size: 14px;
+  line-height: 1;
+}
+.ydr-pin.lv-I {
+  background: #7b241c;
+}
+.ydr-pin.lv-II {
+  background: #c0392b;
+}
+.ydr-pin.lv-III {
+  background: #e67e22;
+}
+.ydr-pin.lv-IV {
+  background: #f1c40f;
+}
+/* 高等级脉冲 */
+.ydr-pin.pulse::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: inherit;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  animation: ydr-pulse 1.6s ease-out infinite;
+  z-index: -1;
+}
+@keyframes ydr-pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* 地图图例 */
+.ydr-legend {
+  background: rgba(255, 255, 255, 0.94);
+  padding: 8px 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(28, 39, 51, 0.14);
+  font-size: 12px;
+  color: #2c3a47;
+  line-height: 1.7;
+}
+.ydr-legend .lg-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ydr-legend .lg-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 1.5px solid #fff;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+/* 弹窗主题化 */
+.leaflet-popup-content-wrapper {
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(28, 39, 51, 0.18);
+}
+.leaflet-popup-content {
+  margin: 12px 14px;
+  font-size: 12.5px;
+  color: #2c3a47;
+  line-height: 1.7;
+}
+.leaflet-popup-content b {
+  color: #1c2733;
+}
+.ydr-popup-title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #e03e2f;
+  margin-bottom: 4px;
+}
+.ydr-popup-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-top: 4px;
+}
+.ydr-popup-meta span {
+  color: #5a6675;
+}

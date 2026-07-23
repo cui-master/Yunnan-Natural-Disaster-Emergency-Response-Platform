@@ -29,7 +29,10 @@ onMounted(load)
     <el-card class="page-card">
       <template #header>
         <div class="flex-between">
-          <b>审计日志</b>
+          <div>
+            <div class="section-title">审计日志</div>
+            <div class="head-sub">记录关键操作与登录行为，支持按操作人 / 动作检索</div>
+          </div>
           <div>
             <el-input v-model="keyword" placeholder="操作人/动作" style="width: 180px; margin-right: 10px" @keyup.enter="load" />
             <el-button type="primary" @click="load">查询</el-button>

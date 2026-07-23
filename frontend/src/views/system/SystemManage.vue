@@ -54,6 +54,10 @@ onMounted(() => {
 <template>
   <div class="sys">
     <el-card class="page-card">
+      <template #header>
+        <div class="section-title">系统管理</div>
+        <div class="head-sub">用户、角色权限（RBAC）与系统配置的统一维护</div>
+      </template>
       <el-tabs v-model="activeTab">
         <!-- 用户管理 -->
         <el-tab-pane label="用户管理" name="user">

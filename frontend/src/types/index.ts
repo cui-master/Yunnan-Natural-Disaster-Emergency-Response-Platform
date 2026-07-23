@@ -244,6 +244,54 @@ export interface KnowledgeUploadReq {
   fileUrl: string
 }
 
+// -------------------- 知识库（Dify，按 kit 分库：优化调度 / 风险评估） --------------------
+// 注意：dataset_id 与密钥均托管在 FastAPI ai_service（其他成员实现），前端只传知识库中文名。
+
+export type KnowledgeKitKey = 'OPTIMIZE' | 'RISK'
+
+export interface KnowledgeKitMeta {
+  key: KnowledgeKitKey
+  /** 传给后端/ai_service 的中文名，对应 FastAPI KB_MAP 的 key */
+  name: string
+  datasetId: string
+  desc: string
+}
+
+export const KNOWLEDGE_KITS: KnowledgeKitMeta[] = [
+  {
+    key: 'OPTIMIZE',
+    name: '优化调度',
+    datasetId: 'a154e469-3acd-4c33-bcdc-ea65d0886488',
+    desc: '物资调度预案 / Sandbox 仿真参考资料'
+  },
+  {
+    key: 'RISK',
+    name: '风险评估',
+    datasetId: '03d787b9-e585-4b85-abbe-332e208c6530',
+    desc: '风险研判 / 历史案例 / 处置规范'
+  }
+]
+
+export type KnowledgeKitDocStatus = 'PARSING' | 'COMPLETED' | 'FAILED'
+
+export interface KnowledgeKitDoc {
+  id: string
+  name: string
+  status: KnowledgeKitDocStatus
+  wordCount?: number
+  chunkCount?: number
+  uploadedAt: string
+}
+
+export interface KnowledgeKitUploadResult {
+  name: string
+  status: string
+}
+export interface KnowledgeKitUploadResp {
+  msg: string
+  results: KnowledgeKitUploadResult[]
+}
+
 // -------------------- 审计日志 / 系统管理（前端页，后端暂未提供接口） --------------------
 
 export interface AuditLog {
