@@ -1,15 +1,16 @@
 import { defineStore } from 'pinia'
-import { login as loginApi, me as meApi } from '../api'
+import { login as loginApi, me as meApi } from '@/api/auth'
+import type { RoleCode } from '@/types'
 
 interface State {
   token: string
   username: string
   realName: string
-  roleKey: string
+  roleKey: RoleCode | ''
   roleName: string
 }
 
-export const useAuth = defineStore('auth', {
+export const useAuthStore = defineStore('auth', {
   state: (): State => ({
     token: localStorage.getItem('token') || '',
     username: '',
@@ -17,9 +18,12 @@ export const useAuth = defineStore('auth', {
     roleKey: '',
     roleName: ''
   }),
+  getters: {
+    hasRole: (s) => (role: RoleCode | string) => (s.roleKey as string) === role
+  },
   actions: {
     async login(username: string, password: string) {
-      const d = await loginApi(username, password)
+      const d = await loginApi({ username, password })
       this.token = d.token
       this.username = d.username
       this.realName = d.realName
@@ -34,13 +38,20 @@ export const useAuth = defineStore('auth', {
         this.realName = d.realName
         this.roleKey = d.roleKey
         this.roleName = d.roleName
-      } catch (_) {
+      } catch {
         /* ignore */
       }
     },
     logout() {
       this.token = ''
+      this.username = ''
+      this.realName = ''
+      this.roleKey = ''
+      this.roleName = ''
       localStorage.removeItem('token')
     }
   }
 })
+
+// 兼容旧引用
+export const useAuth = useAuthStore

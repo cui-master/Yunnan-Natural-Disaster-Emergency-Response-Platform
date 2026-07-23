@@ -1,0 +1,7 @@
+node_modules
+dist
+*.local
+tmp/
+vite.config.js
+*.timestamp-*.mjs
+*.tsbuildinfo
