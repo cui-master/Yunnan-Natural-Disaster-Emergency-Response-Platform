@@ -1,5 +1,5 @@
 from pydantic_settings import BaseSettings
-from typing import Optional
+from typing import Optional, Dict
 
 
 class Settings(BaseSettings):
@@ -16,13 +16,28 @@ class Settings(BaseSettings):
     NEO4J_PASSWORD: str = "12345678"
     NEO4J_DATABASE: str = "neo4j"
 
-    # Dify
+    # Dify 工作流
     DIFY_BASE_URL: str = "http://localhost:5001"
     DIFY_API_KEY: str = ""
     DIFY_WORKFLOW_ID: str = "natural-disaster-workflow"
 
+    # Dify 知识库
+    DIFY_DATASET_API_KEY: str = ""
+    DIFY_DATASET_BASE_URL: str = "http://localhost:5001"
+
+    # 知识库名称与 ID 映射
+    KB_OPTIMIZE_DISPATCH_ID: str = "a154e469-3acd-4c33-bcdc-ea65d0886488"
+    KB_RISK_ASSESSMENT_ID: str = "03d787b9-e585-4b85-abbe-332e208c6530"
+
     # Business
     RISK_LEVEL_SYNC_INTERVAL_MINUTES: int = 30
+
+    @property
+    def KB_MAP(self) -> Dict[str, str]:
+        return {
+            "优化调度": self.KB_OPTIMIZE_DISPATCH_ID,
+            "风险评估": self.KB_RISK_ASSESSMENT_ID,
+        }
 
     class Config:
         env_file = ".env"
