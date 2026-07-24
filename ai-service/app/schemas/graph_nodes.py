@@ -10,6 +10,13 @@ class DisasterSpotBase(BaseModel):
     urgent_level: int = Field(3, ge=1, le=5, description="紧急等级 1~5")
     lng: Optional[float] = None
     lat: Optional[float] = None
+    # 上报扩展字段（保持 snake_case，不新增 Label）
+    reporter: Optional[str] = Field(None, description="上报人")
+    report_time: Optional[datetime] = Field(None, description="上报时间")
+    casualties: Optional[int] = Field(None, description="伤亡人数")
+    affected_people: Optional[int] = Field(None, description="受灾人数")
+    description: Optional[str] = Field(None, description="现场描述")
+    severity: Optional[str] = Field(None, description="严重程度")
 
 
 class DisasterSpotCreate(DisasterSpotBase):
@@ -22,6 +29,22 @@ class DisasterSpotResponse(DisasterSpotBase):
 
     class Config:
         from_attributes = True
+
+
+class DisasterSpotUpdate(BaseModel):
+    """灾情点位更新（所有字段可选）"""
+    name: Optional[str] = None
+    disaster_type: Optional[list[str]] = None
+    risk_level: Optional[str] = None
+    urgent_level: Optional[int] = Field(None, ge=1, le=5)
+    lng: Optional[float] = None
+    lat: Optional[float] = None
+    reporter: Optional[str] = None
+    report_time: Optional[datetime] = None
+    casualties: Optional[int] = None
+    affected_people: Optional[int] = None
+    description: Optional[str] = None
+    severity: Optional[str] = None
 
 
 class WarehouseBase(BaseModel):
@@ -44,6 +67,15 @@ class WarehouseResponse(WarehouseBase):
         from_attributes = True
 
 
+class WarehouseUpdate(BaseModel):
+    name: Optional[str] = None
+    address: Optional[str] = None
+    lng: Optional[float] = None
+    lat: Optional[float] = None
+    manager: Optional[str] = None
+    contact: Optional[str] = None
+
+
 class MaterialBase(BaseModel):
     name: str
     type: str = Field(..., description="物资类型：防汛物资/地质灾害物资/地震救援物资")
@@ -61,6 +93,14 @@ class MaterialResponse(MaterialBase):
 
     class Config:
         from_attributes = True
+
+
+class MaterialUpdate(BaseModel):
+    name: Optional[str] = None
+    type: Optional[str] = None
+    unit: Optional[str] = None
+    weight: Optional[float] = None
+    suitable_disaster: Optional[list[str]] = None
 
 
 class RescueTeamBase(BaseModel):
@@ -83,10 +123,19 @@ class RescueTeamResponse(RescueTeamBase):
         from_attributes = True
 
 
+class RescueTeamUpdate(BaseModel):
+    team_name: Optional[str] = None
+    current_lng: Optional[float] = None
+    current_lat: Optional[float] = None
+    carry_limit: Optional[float] = None
+    suitable_disaster: Optional[list[str]] = None
+    status: Optional[str] = None
+
+
 class ShelterBase(BaseModel):
     name: str
     max_capacity: int = 0
-    remain_space: int = 0
+    accommodated_count: int = Field(0, description="已容纳人数")
     lng: Optional[float] = None
     lat: Optional[float] = None
 
@@ -100,3 +149,11 @@ class ShelterResponse(ShelterBase):
 
     class Config:
         from_attributes = True
+
+
+class ShelterUpdate(BaseModel):
+    name: Optional[str] = None
+    max_capacity: Optional[int] = None
+    accommodated_count: Optional[int] = None
+    lng: Optional[float] = None
+    lat: Optional[float] = None

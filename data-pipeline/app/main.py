@@ -5,14 +5,27 @@ from app.core.config import settings
 from app.core.logging import logger
 from app.api import api_router
 from app.tasks import start_scheduler, stop_scheduler
+import asyncio
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info(f"启动 {settings.APP_NAME} v{settings.APP_VERSION}")
-    start_scheduler()
+    # 按需调用模式：不启动定时爬取，只启动 SSE 心跳
+    if settings.CRAWLER_INTERVAL_MINUTES > 0:
+        start_scheduler()
+        logger.info(f"定时爬取已启用，间隔: {settings.CRAWLER_INTERVAL_MINUTES} 分钟")
+    else:
+        logger.info("定时爬取已禁用，采用按需调用模式")
+        # 启动 SSE 心跳任务
+        loop = asyncio.get_event_loop()
+        from app.tasks.scheduler import keepalive_task
+        loop.create_task(keepalive_task())
+
     yield
-    stop_scheduler()
+
+    if settings.CRAWLER_INTERVAL_MINUTES > 0:
+        stop_scheduler()
     logger.info("服务已停止")
 
 

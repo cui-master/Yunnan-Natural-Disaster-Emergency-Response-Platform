@@ -187,28 +187,28 @@ def create_rescue_teams(tx):
 # ====================== 模块4：避难场所（22个一级场所 + 67个属性节点，合计89） ======================
 def create_shelters(tx):
     shelters = [
-        {"name": "昆明市体育中心避难场所", "place_name": "昆明市体育中心", "location": "昆明市呈贡区", "max": 50000, "left": 0},
-        {"name": "昭通市望海公园应急避难场所", "place_name": "望海公园应急避难广场", "location": "昭通市昭阳区", "max": 20000, "left": 0},
-        {"name": "大理州全民健身中心避难场所", "place_name": "大理州全民健身中心", "location": "大理州大理市", "max": 30000, "left": 0},
-        {"name": "怒江州六库公园避难所", "place_name": "六库中央公园", "location": "怒江州泸水市", "max": 12000, "left": 0},
-        {"name": "保山市三馆文化广场避难所", "place_name": "三馆文化广场", "location": "保山市隆阳区", "max": 18000, "left": 0},
-        {"name": "红河州州政府广场避难场所", "place_name": "红河州政府广场", "location": "红河州蒙自市", "max": 25000, "left": 0},
-        {"name": "曲靖市珠江源广场避难所", "place_name": "珠江源广场", "location": "曲靖市麒麟区", "max": 22000, "left": 0},
-        {"name": "丽江市红太阳广场避难场所", "place_name": "红太阳广场", "location": "丽江市古城区", "max": 15000, "left": 0},
-        {"name": "东川区和平广场应急避难场所", "place_name": "和平广场应急避难场所", "location": "昆明市东川区", "max": 8000, "left": 0},
-        {"name": "彝良县行政中心避难广场", "place_name": "彝良县行政中心广场", "location": "昭通市彝良县", "max": 5000, "left": 0},
-        {"name": "贡山县民族文化广场避难所", "place_name": "贡山县民族文化广场", "location": "怒江州贡山县", "max": 3000, "left": 0},
-        {"name": "漾濞县人和广场避难场所", "place_name": "漾濞县人和广场", "location": "大理州漾濞县", "max": 4000, "left": 0},
-        {"name": "会泽县会泽公园避难所", "place_name": "会泽公园", "location": "曲靖市会泽县", "max": 6000, "left": 0},
-        {"name": "腾冲市腾越文化广场避难所", "place_name": "腾越文化广场", "location": "保山市腾冲市", "max": 12000, "left": 0},
-        {"name": "元阳县南沙广场避难所", "place_name": "南沙民族广场", "location": "红河州元阳县", "max": 4500, "left": 0},
-        {"name": "禄劝县民族文化广场避难所", "place_name": "禄劝民族文化广场", "location": "昆明市禄劝县", "max": 5500, "left": 0},
-        {"name": "巧家县堂琅广场避难场所", "place_name": "堂琅文化广场", "location": "昭通市巧家县", "max": 4200, "left": 0},
-        {"name": "镇雄县赤水源广场避难所", "place_name": "赤水源广场", "location": "昭通市镇雄县", "max": 7000, "left": 0},
-        {"name": "香格里拉市坛城广场避难所", "place_name": "坛城文化广场", "location": "迪庆州香格里拉市", "max": 8500, "left": 0},
-        {"name": "德钦县升平广场避难所", "place_name": "升平镇文化广场", "location": "迪庆州德钦县", "max": 2000, "left": 0},
-        {"name": "澜沧县佛房广场避难所", "place_name": "佛房文化广场", "location": "普洱市澜沧县", "max": 3800, "left": 0},
-        {"name": "墨江县太阳广场避难所", "place_name": "太阳广场", "location": "普洱市墨江县", "max": 4800, "left": 0}
+        {"name": "昆明市体育中心避难场所", "place_name": "昆明市体育中心", "location": "昆明市呈贡区", "max": 50000, "accommodated": 0},
+        {"name": "昭通市望海公园应急避难场所", "place_name": "望海公园应急避难广场", "location": "昭通市昭阳区", "max": 20000, "accommodated": 0},
+        {"name": "大理州全民健身中心避难场所", "place_name": "大理州全民健身中心", "location": "大理州大理市", "max": 30000, "accommodated": 0},
+        {"name": "怒江州六库公园避难所", "place_name": "六库中央公园", "location": "怒江州泸水市", "max": 12000, "accommodated": 0},
+        {"name": "保山市三馆文化广场避难所", "place_name": "三馆文化广场", "location": "保山市隆阳区", "max": 18000, "accommodated": 0},
+        {"name": "红河州州政府广场避难场所", "place_name": "红河州政府广场", "location": "红河州蒙自市", "max": 25000, "accommodated": 0},
+        {"name": "曲靖市珠江源广场避难所", "place_name": "珠江源广场", "location": "曲靖市麒麟区", "max": 22000, "accommodated": 0},
+        {"name": "丽江市红太阳广场避难场所", "place_name": "红太阳广场", "location": "丽江市古城区", "max": 15000, "accommodated": 0},
+        {"name": "东川区和平广场应急避难场所", "place_name": "和平广场应急避难场所", "location": "昆明市东川区", "max": 8000, "accommodated": 0},
+        {"name": "彝良县行政中心避难广场", "place_name": "彝良县行政中心广场", "location": "昭通市彝良县", "max": 5000, "accommodated": 0},
+        {"name": "贡山县民族文化广场避难所", "place_name": "贡山县民族文化广场", "location": "怒江州贡山县", "max": 3000, "accommodated": 0},
+        {"name": "漾濞县人和广场避难场所", "place_name": "漾濞县人和广场", "location": "大理州漾濞县", "max": 4000, "accommodated": 0},
+        {"name": "会泽县会泽公园避难所", "place_name": "会泽公园", "location": "曲靖市会泽县", "max": 6000, "accommodated": 0},
+        {"name": "腾冲市腾越文化广场避难所", "place_name": "腾越文化广场", "location": "保山市腾冲市", "max": 12000, "accommodated": 0},
+        {"name": "元阳县南沙广场避难所", "place_name": "南沙民族广场", "location": "红河州元阳县", "max": 4500, "accommodated": 0},
+        {"name": "禄劝县民族文化广场避难所", "place_name": "禄劝民族文化广场", "location": "昆明市禄劝县", "max": 5500, "accommodated": 0},
+        {"name": "巧家县堂琅广场避难场所", "place_name": "堂琅文化广场", "location": "昭通市巧家县", "max": 4200, "accommodated": 0},
+        {"name": "镇雄县赤水源广场避难所", "place_name": "赤水源广场", "location": "昭通市镇雄县", "max": 7000, "accommodated": 0},
+        {"name": "香格里拉市坛城广场避难所", "place_name": "坛城文化广场", "location": "迪庆州香格里拉市", "max": 8500, "accommodated": 0},
+        {"name": "德钦县升平广场避难所", "place_name": "升平镇文化广场", "location": "迪庆州德钦县", "max": 2000, "accommodated": 0},
+        {"name": "澜沧县佛房广场避难所", "place_name": "佛房文化广场", "location": "普洱市澜沧县", "max": 3800, "accommodated": 0},
+        {"name": "墨江县太阳广场避难所", "place_name": "太阳广场", "location": "普洱市墨江县", "max": 4800, "accommodated": 0}
     ]
 
     cql = """
@@ -216,11 +216,11 @@ def create_shelters(tx):
     MERGE (name:场所名称 {value: $place_name})
     MERGE (loc:地点 {value: $location})
     MERGE (max:最大容纳人数 {value: $max})
-    MERGE (left:剩余容纳人数 {value: $left})
+    MERGE (acc:已容纳人数 {value: $accommodated})
     MERGE (sh)-[:是]->(name)
     MERGE (sh)-[:位于]->(loc)
     MERGE (sh)-[:最大容纳人数]->(max)
-    MERGE (sh)-[:剩余容纳人数]->(left)
+    MERGE (sh)-[:已容纳人数]->(acc)
     """
     for sh in shelters:
         tx.run(cql, **sh)
