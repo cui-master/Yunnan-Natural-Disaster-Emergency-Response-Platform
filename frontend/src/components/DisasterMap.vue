@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+<<<<<<< HEAD
+=======
+import L from 'leaflet'
+>>>>>>> feature-cui
 import type { DisasterEvent } from '@/types'
 
 const props = defineProps<{
@@ -8,6 +12,7 @@ const props = defineProps<{
   zoom?: number
 }>()
 
+<<<<<<< HEAD
 // 高德开放平台 Key & 安全密钥（从 .env 读取：VITE_AMAP_KEY / VITE_AMAP_SECURITY_CODE）
 const AMAP_KEY = import.meta.env.VITE_AMAP_KEY || ''
 const AMAP_SECURITY_CODE = import.meta.env.VITE_AMAP_SECURITY_CODE || ''
@@ -40,6 +45,11 @@ function hideStatus() {
     statusOverlay = null
   }
 }
+=======
+const mapEl = ref<HTMLDivElement>()
+let map: L.Map | null = null
+let layer: L.LayerGroup | null = null
+>>>>>>> feature-cui
 
 const levelColor: Record<string, string> = {
   I: '#7b241c',
@@ -47,6 +57,7 @@ const levelColor: Record<string, string> = {
   III: '#e67e22',
   IV: '#f1c40f'
 }
+<<<<<<< HEAD
 const levelLabel: Record<string, string> = {
   I: 'Ⅰ级 特别重大',
   II: 'Ⅱ级 重大',
@@ -209,23 +220,81 @@ onMounted(() => {
       console.error('[AMap]', err)
       showStatus('地图加载失败：' + (err && err.message ? err.message : err), 'error')
     })
+=======
+const typeLabel: Record<string, string> = {
+  EARTHQUAKE: '地震',
+  FLOOD: '洪涝',
+  LANDSLIDE: '滑坡',
+  DEBRIS_FLOW: '泥石流',
+  DROUGHT: '干旱',
+  FOREST_FIRE: '森林火灾',
+  HAIL: '冰雹',
+  TYPHOON: '台风'
+}
+
+function renderMarkers() {
+  if (!map) return
+  if (layer) layer.remove()
+  layer = L.layerGroup().addTo(map)
+  props.events.forEach((e) => {
+    const color = levelColor[e.level] || '#999'
+    const icon = L.divIcon({
+      className: 'ydr-marker',
+      html: `<div style="width:18px;height:18px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 0 0 2px ${color}55"></div>`,
+      iconSize: [18, 18],
+      iconAnchor: [9, 9]
+    })
+    const marker = L.marker([e.geo.lat, e.geo.lng], { icon })
+    marker.bindTooltip(
+      `<b>${e.title}</b><br/>等级：${e.level} 级<br/>状态：${e.status}<br/>影响人口：${e.affectedPopulation || 0}`,
+      { direction: 'top' }
+    )
+    marker.bindPopup(
+      `<div style="min-width:200px"><b>${e.title}</b><br/>
+       类型：${typeLabel[e.type]}<br/>等级：${e.level}<br/>
+       位置：${e.location}<br/>描述：${e.description}</div>`
+    )
+    layer!.addLayer(marker)
+  })
+}
+
+onMounted(() => {
+  map = L.map(mapEl.value as HTMLDivElement, {
+    center: props.center || [25.04, 101.5],
+    zoom: props.zoom || 7,
+    attributionControl: false
+  })
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 18
+  }).addTo(map)
+  renderMarkers()
+>>>>>>> feature-cui
 })
 
 watch(
   () => props.events,
+<<<<<<< HEAD
   () => {
     const AMap = (window as any).AMap
     if (map && AMap) renderMarkers(AMap)
   },
+=======
+  () => renderMarkers(),
+>>>>>>> feature-cui
   { deep: true }
 )
 
 onBeforeUnmount(() => {
+<<<<<<< HEAD
   if (ro) ro.disconnect()
   if (map) {
     map.destroy()
     map = null
   }
+=======
+  map?.remove()
+  map = null
+>>>>>>> feature-cui
 })
 </script>
 
@@ -235,11 +304,17 @@ onBeforeUnmount(() => {
 
 <style scoped>
 .map {
+<<<<<<< HEAD
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   border-radius: 12px;
+=======
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+>>>>>>> feature-cui
   overflow: hidden;
 }
 </style>

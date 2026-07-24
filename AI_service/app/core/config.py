@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     NEO4J_PASSWORD: str = "12345678"
     NEO4J_DATABASE: str = "neo4j"
 
+<<<<<<< HEAD
     # Dify 工作流（方案生成）—— 使用应用密钥 app-xxx
     DIFY_BASE_URL: str = "http://localhost:8083"
     DIFY_API_KEY: str = ""
@@ -27,6 +28,13 @@ class Settings(BaseSettings):
     KB_OPTIMIZE_DISPATCH_ID: str = "a154e469-3acd-4c33-bcdc-ea65d0886488"
     KB_RISK_ASSESSMENT_ID: str = "03d787b9-e585-4b85-abbe-332e208c6530"
 
+=======
+    # Dify
+    DIFY_BASE_URL: str = "http://localhost:5001"
+    DIFY_API_KEY: str = ""
+    DIFY_WORKFLOW_ID: str = "natural-disaster-workflow"
+
+>>>>>>> feature-cui
     # Business
     RISK_LEVEL_SYNC_INTERVAL_MINUTES: int = 30
 

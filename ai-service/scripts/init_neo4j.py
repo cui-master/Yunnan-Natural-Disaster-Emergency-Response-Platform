@@ -246,6 +246,7 @@ def create_rescue_teams():
 def create_shelters():
     """创建避难场所"""
     shelters = [
+<<<<<<< HEAD
         {"id": "sh-001", "name": "昭通市体育中心避难所", "max_capacity": 5000, "remain_space": 5000,
          "lng": 103.72, "lat": 27.31},
         {"id": "sh-002", "name": "昆明东川体育场避难所", "max_capacity": 3000, "remain_space": 3000,
@@ -261,11 +262,32 @@ def create_shelters():
         {"id": "sh-007", "name": "丽江市区一中避难所", "max_capacity": 3000, "remain_space": 3000,
          "lng": 100.23, "lat": 26.87},
         {"id": "sh-008", "name": "蒙自市第一小学避难所", "max_capacity": 2800, "remain_space": 2800,
+=======
+        {"id": "sh-001", "name": "昭通市体育中心避难所", "max_capacity": 5000, "accommodated_count": 0,
+         "lng": 103.72, "lat": 27.31},
+        {"id": "sh-002", "name": "昆明东川体育场避难所", "max_capacity": 3000, "accommodated_count": 0,
+         "lng": 103.18, "lat": 26.09},
+        {"id": "sh-003", "name": "大理州下关一中避难所", "max_capacity": 4000, "accommodated_count": 0,
+         "lng": 100.22, "lat": 25.61},
+        {"id": "sh-004", "name": "怒江州六库镇中心小学避难所", "max_capacity": 2000, "accommodated_count": 0,
+         "lng": 98.85, "lat": 25.85},
+        {"id": "sh-005", "name": "普洱市思茅区一中避难所", "max_capacity": 3500, "accommodated_count": 0,
+         "lng": 100.97, "lat": 22.78},
+        {"id": "sh-006", "name": "楚雄市鹿城小学避难所", "max_capacity": 2500, "accommodated_count": 0,
+         "lng": 101.54, "lat": 25.04},
+        {"id": "sh-007", "name": "丽江市区一中避难所", "max_capacity": 3000, "accommodated_count": 0,
+         "lng": 100.23, "lat": 26.87},
+        {"id": "sh-008", "name": "蒙自市第一小学避难所", "max_capacity": 2800, "accommodated_count": 0,
+>>>>>>> feature-cui
          "lng": 103.40, "lat": 23.37},
     ]
     cql = """
     MERGE (sh:Shelter {id: $id})
+<<<<<<< HEAD
     SET sh.name = $name, sh.max_capacity = $max_capacity, sh.remain_space = $remain_space,
+=======
+    SET sh.name = $name, sh.max_capacity = $max_capacity, sh.accommodated_count = $accommodated_count,
+>>>>>>> feature-cui
         sh.lng = $lng, sh.lat = $lat
     """
     for s in shelters:

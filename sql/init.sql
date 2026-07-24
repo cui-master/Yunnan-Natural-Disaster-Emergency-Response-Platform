@@ -182,6 +182,7 @@ CREATE TABLE IF NOT EXISTS plan_chunks (
 );
 CREATE INDEX IF NOT EXISTS idx_plan_chunks_embedding ON plan_chunks USING ivfflat (embedding vector_cosine_ops) WITH (lists = 100);
 
+<<<<<<< HEAD
 -- ---------------- 知识库注册表（Dify Dataset 映射，DB 为唯一真源） ----------------
 CREATE TABLE IF NOT EXISTS knowledge_bases (
     id          BIGSERIAL PRIMARY KEY,
@@ -208,6 +209,8 @@ CREATE TABLE IF NOT EXISTS knowledge_docs (
 );
 CREATE INDEX IF NOT EXISTS idx_knowledge_docs_kb ON knowledge_docs(kb_name);
 
+=======
+>>>>>>> feature-cui
 -- ============================================================
 -- 种子数据
 -- ============================================================
@@ -226,12 +229,15 @@ INSERT INTO users (username, password, real_name, phone, role_id, status) VALUES
     ('admin',     '$2b$10$5JW5WOWOqnAYG0wbrJrVYOdAQXlGrTbT.ep2Y25c9RhgfBDBQxE7S', '赵管理', '13800000004', (SELECT id FROM roles WHERE role_key='ROLE_ADMIN'),    'ENABLED')
 ON CONFLICT (username) DO NOTHING;
 
+<<<<<<< HEAD
 -- 知识库注册表（dataset_id 来自 Dify 控制台；优化调度 / 风险评估）
 INSERT INTO knowledge_bases (kb_key, kb_name, dataset_id, description) VALUES
     ('OPTIMIZE', '优化调度', 'a154e469-3acd-4c33-bcdc-ea65d0886488', '物资调度预案 / Sandbox 仿真参考资料'),
     ('RISK',     '风险评估', '03d787b9-e585-4b85-abbe-332e208c6530', '风险研判 / 历史案例 / 处置规范')
 ON CONFLICT (kb_key) DO NOTHING;
 
+=======
+>>>>>>> feature-cui
 -- 示例资源
 INSERT INTO resources (name, type, total, available, unit, status) VALUES
     ('抢险队员-一组', 'PERSONNEL', 30, 30, '人',  'NORMAL'),

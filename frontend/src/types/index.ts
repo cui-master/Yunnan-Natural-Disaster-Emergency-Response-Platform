@@ -244,6 +244,7 @@ export interface KnowledgeUploadReq {
   fileUrl: string
 }
 
+<<<<<<< HEAD
 // -------------------- 知识库（Dify，按 kit 分库：优化调度 / 风险评估） --------------------
 // 注意：dataset_id 与密钥均托管在 FastAPI ai_service（其他成员实现），前端只传知识库中文名。
 
@@ -292,6 +293,8 @@ export interface KnowledgeKitUploadResp {
   results: KnowledgeKitUploadResult[]
 }
 
+=======
+>>>>>>> feature-cui
 // -------------------- 审计日志 / 系统管理（前端页，后端暂未提供接口） --------------------
 
 export interface AuditLog {

@@ -9,11 +9,28 @@ class Settings(BaseSettings):
     PORT: int = 8000
     DEBUG: bool = False
 
+<<<<<<< HEAD
     CRAWLER_INTERVAL_MINUTES: int = 30
+=======
+    # 爬虫配置（按需调用模式，关闭定时爬取）
+    CRAWLER_INTERVAL_MINUTES: int = 0  # 0 表示关闭定时爬取
+>>>>>>> feature-cui
     CRAWLER_USER_AGENT: str = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
     ENABLE_MOCK_CRAWLER: bool = False
     ENABLE_YUNNAN_NET_CRAWLER: bool = True
 
+<<<<<<< HEAD
+=======
+    # MCP 按需调用配置（快速响应）
+    MCP_CRAWLER_KEYWORDS: List[str] = [
+        "云南 地震",
+        "云南 洪水",
+        "云南 暴雨",
+    ]
+    MCP_CRAWLER_MIN_INTERVAL: float = 1.0  # 关键词间隔下限（秒）
+    MCP_CRAWLER_MAX_INTERVAL: float = 2.0  # 关键词间隔上限（秒）
+
+>>>>>>> feature-cui
     SSE_KEEPALIVE_INTERVAL: int = 15
     SSE_RETRY_TIMEOUT: int = 3000
 

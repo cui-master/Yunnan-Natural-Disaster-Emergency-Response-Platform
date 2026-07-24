@@ -1,0 +1,121 @@
+2026-07-24 09:55:04.097 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 09:55:35.223 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 09:56:49.405 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 09:57:48.099 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 09:57:48.961 | INFO     | app.main:lifespan:13 - 启动 云南省自然灾害应急决策AI服务 v1.0.0
+2026-07-24 09:57:51.064 | INFO     | app.core.neo4j_client:init:24 - Neo4j 连接成功: bolt://localhost:7687
+2026-07-24 09:57:51.074 | INFO     | app.tasks.scheduler:start_scheduler:33 - 定时任务已启动：完整数据管线（每 30 分钟）
+2026-07-24 09:58:19.843 | INFO     | app.api.v1.reporter:report_disaster:33 - 灾情上报成功: id=test-ds-001, name=?????????, reporter=??
+2026-07-24 10:00:07.738 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 10:00:08.611 | INFO     | app.main:lifespan:13 - 启动 云南省自然灾害应急决策AI服务 v1.0.0
+2026-07-24 10:00:10.712 | INFO     | app.core.neo4j_client:init:44 - Neo4j 连接成功: bolt://localhost:7687
+2026-07-24 10:00:10.719 | INFO     | app.tasks.scheduler:start_scheduler:33 - 定时任务已启动：完整数据管线（每 30 分钟）
+2026-07-24 10:00:17.833 | INFO     | app.api.v1.reporter:report_disaster:53 - 灾情上报成功: id=test-ds-001, name=?????????, reporter=??
+2026-07-24 10:01:25.250 | WARNING  | app.agents.dify_client:run_risk_assessment:181 - Dify 风险评估失败，降级到 LLM: All connection attempts failed
+2026-07-24 10:01:32.651 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=342
+2026-07-24 10:01:32.652 | INFO     | app.agents.llm_client:chat:142 - [LLM:deepseek-v4-flash] 生成成功，长度=370
+2026-07-24 10:01:50.259 | ERROR    | app.api.v1.commander:get_dispatch_resources:150 - 查询调度资源失败: {code: Neo.ClientError.Statement.SyntaxError} {message: shortestPath(...) contains properties MapExpression(ArraySeq((PropertyKeyName(blocked),False()))). This is currently not supported. (line 6, column 19 (offset: 271))
+"        MATCH p = shortestPath((wh)-[:ROAD_CONNECT*1..8 {blocked:false}]-(area))"
+                   ^}
+2026-07-24 10:01:51.415 | ERROR    | app.api.v1.commander:generate_dispatch_plan:100 - 生成处置方案失败: {code: Neo.ClientError.Statement.SyntaxError} {message: shortestPath(...) contains properties MapExpression(ArraySeq((PropertyKeyName(blocked),False()))). This is currently not supported. (line 6, column 19 (offset: 271))
+"        MATCH p = shortestPath((wh)-[:ROAD_CONNECT*1..8 {blocked:false}]-(area))"
+                   ^}
+2026-07-24 10:03:04.472 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 10:03:05.006 | INFO     | app.main:lifespan:13 - 启动 云南省自然灾害应急决策AI服务 v1.0.0
+2026-07-24 10:03:07.097 | INFO     | app.core.neo4j_client:init:44 - Neo4j 连接成功: bolt://localhost:7687
+2026-07-24 10:03:07.102 | INFO     | app.tasks.scheduler:start_scheduler:33 - 定时任务已启动：完整数据管线（每 30 分钟）
+2026-07-24 10:03:38.451 | WARNING  | app.agents.dify_client:run_workflow:50 - Dify 调度工作流失败，降级到 LLM: All connection attempts failed
+2026-07-24 10:04:14.233 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=336
+2026-07-24 10:04:14.234 | INFO     | app.agents.llm_client:chat:142 - [LLM:deepseek-v4-flash] 生成成功，长度=3679
+2026-07-24 10:04:38.740 | INFO     | app.agents.llm_client:set_provider:49 - LLM provider 已切换为: qwen
+2026-07-24 10:04:38.741 | INFO     | app.api.v1.admin:update_llm_config:76 - LLM 配置已更新: provider=qwen, model=qwen-plus
+2026-07-24 10:04:38.746 | INFO     | app.agents.llm_client:set_provider:49 - LLM provider 已切换为: deepseek
+2026-07-24 10:04:38.746 | INFO     | app.api.v1.admin:update_llm_config:76 - LLM 配置已更新: provider=deepseek, model=deepseek-v4-flash
+2026-07-24 10:04:59.384 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=34
+2026-07-24 10:05:27.242 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 10:05:30.106 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=37
+2026-07-24 10:06:36.015 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 10:06:36.781 | INFO     | app.main:lifespan:13 - 启动 云南省自然灾害应急决策AI服务 v1.0.0
+2026-07-24 10:06:38.906 | INFO     | app.core.neo4j_client:init:44 - Neo4j 连接成功: bolt://localhost:7687
+2026-07-24 10:06:38.911 | INFO     | app.tasks.scheduler:start_scheduler:33 - 定时任务已启动：完整数据管线（每 30 分钟）
+2026-07-24 10:06:46.291 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=67
+2026-07-24 10:06:46.291 | INFO     | app.agents.llm_client:chat:149 - [LLM:deepseek-v4-flash] 生成成功，长度=4
+2026-07-24 16:32:16.662 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 16:58:49.932 | WARNING  | app.pipeline.risk_model:<module>:20 - LightGBM 未安装，将使用规则引擎 fallback
+2026-07-24 16:58:51.013 | INFO     | app.main:lifespan:13 - 启动 云南省自然灾害应急决策AI服务 v1.0.0
+2026-07-24 16:58:53.629 | INFO     | app.core.neo4j_client:init:44 - Neo4j 连接成功: bolt://localhost:7687
+2026-07-24 16:58:53.639 | INFO     | app.tasks.scheduler:start_scheduler:33 - 定时任务已启动：完整数据管线（每 30 分钟）
+2026-07-24 17:01:25.176 | INFO     | app.api.v1.reporter:report_disaster:53 - 灾情上报成功: id=test-ds-d8afa6bc, name=测试灾区-漾濞县苍山西镇, reporter=测试信息员
+2026-07-24 17:01:30.179 | INFO     | app.agents.llm_client:set_provider:49 - LLM provider 已切换为: deepseek
+2026-07-24 17:01:30.179 | INFO     | app.api.v1.admin:update_llm_config:76 - LLM 配置已更新: provider=deepseek, model=deepseek-v4-flash
+2026-07-24 17:01:32.078 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=76
+2026-07-24 17:01:32.079 | INFO     | app.agents.llm_client:chat:149 - [LLM:deepseek-v4-flash] 生成成功，长度=4
+2026-07-24 17:01:32.089 | INFO     | app.agents.dify_client:_call_dify_risk:238 - ============================================================
+2026-07-24 17:01:32.091 | INFO     | app.agents.dify_client:_call_dify_risk:239 - [Dify 风险评估工作流] 传入参数:
+2026-07-24 17:01:32.093 | INFO     | app.agents.dify_client:_call_dify_risk:240 -   area_name: 漾濞县苍山西镇
+2026-07-24 17:01:32.093 | INFO     | app.agents.dify_client:_call_dify_risk:241 -   disaster_type: 地震
+2026-07-24 17:01:32.094 | INFO     | app.agents.dify_client:_call_dify_risk:242 -   description: 据中国地震台网测定，漾濞县苍山西镇发生4.5级地震，震源深度10千米
+2026-07-24 17:01:32.095 | INFO     | app.agents.dify_client:_call_dify_risk:243 -   features: {
+  "area_name": "漾濞县苍山西镇",
+  "rainfall_24h": 5,
+  "rainfall_3d": 20,
+  "rainfall_7d": 0,
+  "geological_risk_level": "中",
+  "weather_warning": "无",
+  "water_level_ratio": 0.3,
+  "max_magnitude": 4.5,
+  "opinion_hot_count": 100,
+  "sentiment_score": 0.6
+}
+2026-07-24 17:01:32.096 | INFO     | app.agents.dify_client:_call_dify_risk:244 -   user_id: emergency-admin
+2026-07-24 17:01:32.097 | INFO     | app.agents.dify_client:_call_dify_risk:245 - 完整 payload:
+2026-07-24 17:01:32.098 | INFO     | app.agents.dify_client:_call_dify_risk:246 - {
+  "inputs": {
+    "area_name": "漾濞县苍山西镇",
+    "disaster_type": "地震",
+    "description": "据中国地震台网测定，漾濞县苍山西镇发生4.5级地震，震源深度10千米",
+    "features": "{'area_name': '漾濞县苍山西镇', 'rainfall_24h': 5, 'rainfall_3d': 20, 'rainfall_7d': 0, 'geological_risk_level': '中', 'weather_warning': '无', 'water_level_ratio': 0.3, 'max_magnitude': 4.5, 'opinion_hot_count': 100, 'sentiment_score': 0.6}"
+  },
+  "response_mode": "blocking",
+  "user": "emergency-admin"
+}
+2026-07-24 17:01:32.100 | INFO     | app.agents.dify_client:_call_dify_risk:247 - ============================================================
+2026-07-24 17:01:34.434 | WARNING  | app.agents.dify_client:run_risk_assessment:198 - Dify 风险评估失败，降级到 LLM: All connection attempts failed
+2026-07-24 17:01:41.693 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=523
+2026-07-24 17:01:41.695 | INFO     | app.agents.llm_client:chat:149 - [LLM:deepseek-v4-flash] 生成成功，长度=456
+2026-07-24 17:01:41.856 | INFO     | app.agents.dify_client:_call_dify_workflow:93 - ============================================================
+2026-07-24 17:01:41.859 | INFO     | app.agents.dify_client:_call_dify_workflow:94 - [Dify 调度方案工作流] 传入参数:
+2026-07-24 17:01:41.861 | INFO     | app.agents.dify_client:_call_dify_workflow:95 -   area_name: 漾濞县苍山西镇
+2026-07-24 17:01:41.863 | INFO     | app.agents.dify_client:_call_dify_workflow:96 -   disaster_type: 地震
+2026-07-24 17:01:41.865 | INFO     | app.agents.dify_client:_call_dify_workflow:97 -   risk_level: 极高
+2026-07-24 17:01:41.867 | INFO     | app.agents.dify_client:_call_dify_workflow:98 -   user_id: emergency-admin
+2026-07-24 17:01:41.867 | INFO     | app.agents.dify_client:_call_dify_workflow:99 -   input_risk_info: 漾濞县苍山西镇4.5级地震，震源深度10km，约500人受灾，部分房屋倒塌
+2026-07-24 17:01:41.869 | INFO     | app.agents.dify_client:_call_dify_workflow:100 -   neo4j_data: {
+  "area_name": "漾濞县苍山西镇",
+  "disaster_type": "地震",
+  "recommendations": [],
+  "available_teams": [],
+  "shelters": []
+}...
+2026-07-24 17:01:41.871 | INFO     | app.agents.dify_client:_call_dify_workflow:101 - 完整 payload:
+2026-07-24 17:01:41.873 | INFO     | app.agents.dify_client:_call_dify_workflow:102 - {
+  "inputs": {
+    "input_risk_info": "漾濞县苍山西镇4.5级地震，震源深度10km，约500人受灾，部分房屋倒塌",
+    "disaster_type": "地震",
+    "area_name": "漾濞县苍山西镇",
+    "risk_level": "极高",
+    "vision_text": "卫星图像显示震中周边有建筑倒塌",
+    "neo4j_resource_data": "{'area_name': '漾濞县苍山西镇', 'disaster_type': '地震', 'recommendations': [], 'available_teams': [], 'shelters': []}"
+  },
+  "response_mode": "blocking",
+  "user": "emergency-admin"
+}
+2026-07-24 17:01:41.877 | INFO     | app.agents.dify_client:_call_dify_workflow:103 - ============================================================
+2026-07-24 17:01:44.221 | WARNING  | app.agents.dify_client:run_workflow:51 - Dify 调度工作流失败，降级到 LLM: All connection attempts failed
+2026-07-24 17:02:03.098 | DEBUG    | app.agents.llm_client:chat:135 - [LLM:deepseek-v4-flash] reasoning_content 长度=322
+2026-07-24 17:02:03.099 | INFO     | app.agents.llm_client:chat:149 - [LLM:deepseek-v4-flash] 生成成功，长度=2460
+2026-07-24 17:02:05.486 | ERROR    | app.services.dify_dataset:upload_text:255 - 创建文本文档请求异常: All connection attempts failed
+2026-07-24 17:02:07.871 | ERROR    | app.services.dify_dataset:list_documents:134 - 查询文档列表失败: All connection attempts failed
+2026-07-24 17:02:08.249 | ERROR    | app.api.v1.dispatch:get_dispatch_triples:151 - [MCP] 调度方案三元组查询失败: {neo4j_code: Neo.ClientError.Statement.SyntaxError} {message: Variable `mid1` not defined (line 30, column 123 (offset: 1033))
+"             collect(DISTINCT dr) + collect(DISTINCT tr) + collect(DISTINCT wr) + collect(DISTINCT sr) + collect(DISTINCT mid1) + collect(DISTINCT mid2) + collect(DISTINCT mid3) AS all_roads_raw"
+                                                                                                                           ^} {gql_status: 42001} {gql_status_description: error: syntax error or access rule violation - invalid syntax}

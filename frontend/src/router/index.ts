@@ -1,7 +1,11 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import Login from '../views/Login.vue'
+<<<<<<< HEAD
 import RoleLayout from '../layout/RoleLayout.vue'
+=======
+import BasicLayout from '../layout/BasicLayout.vue'
+>>>>>>> feature-cui
 import { useAuthStore } from '../stores/auth'
 import type { RoleCode } from '../types'
 
@@ -26,7 +30,11 @@ const routes: RouteRecordRaw[] = [
   { path: '/login', component: Login, meta: { title: '登录' } },
   {
     path: '/',
+<<<<<<< HEAD
     component: RoleLayout,
+=======
+    component: BasicLayout,
+>>>>>>> feature-cui
     redirect: '/dashboard',
     meta: { requiresAuth: true },
     children: [
@@ -36,6 +44,7 @@ const routes: RouteRecordRaw[] = [
         meta: { title: '灾情态势大屏', icon: 'DataLine', roles: [], requiresAuth: true }
       },
       {
+<<<<<<< HEAD
         // 普通信息员：上报灾情（唯一上报入口）
         path: 'report',
         component: () => import('../views/report/DisasterReport.vue'),
@@ -67,18 +76,51 @@ const routes: RouteRecordRaw[] = [
       },
       {
         // 系统管理员：知识库（Dify 桥接）
+=======
+        path: 'report',
+        component: () => import('../views/report/DisasterReport.vue'),
+        meta: { title: '灾情上报', icon: 'Upload', roles: ['ROLE_REPORTER', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+      },
+      {
+        path: 'review',
+        component: () => import('../views/report/ReviewWorkbench.vue'),
+        meta: { title: '信息审核', icon: 'Stamp', roles: ['ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+      },
+      {
+        path: 'plan',
+        component: () => import('../views/plan/PlanWorkbench.vue'),
+        meta: { title: '应急方案', icon: 'MagicStick', roles: ['ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+      },
+      {
+        path: 'resources',
+        component: () => import('../views/resource/ResourceQuery.vue'),
+        meta: { title: '资源查询', icon: 'Box', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+      },
+      {
+        path: 'dispatch',
+        component: () => import('../views/resource/DispatchBoard.vue'),
+        meta: { title: '调度看板', icon: 'Promotion', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+      },
+      {
+>>>>>>> feature-cui
         path: 'knowledge',
         component: () => import('../views/knowledge/KnowledgeManage.vue'),
         meta: { title: '知识库', icon: 'Reading', roles: ['ROLE_ADMIN'], requiresAuth: true }
       },
       {
+<<<<<<< HEAD
         // 系统管理员：审计日志
+=======
+>>>>>>> feature-cui
         path: 'audit',
         component: () => import('../views/audit/AuditLog.vue'),
         meta: { title: '审计日志', icon: 'Document', roles: ['ROLE_ADMIN'], requiresAuth: true }
       },
       {
+<<<<<<< HEAD
         // 系统管理员：用户/模型/数据源
+=======
+>>>>>>> feature-cui
         path: 'system',
         component: () => import('../views/system/SystemManage.vue'),
         meta: { title: '系统管理', icon: 'Setting', roles: ['ROLE_ADMIN'], requiresAuth: true }
@@ -103,6 +145,7 @@ router.beforeEach((to, _from, next) => {
   next()
 })
 
+<<<<<<< HEAD
 /**
  * 路由切换走浏览器原生 View Transitions API（Chrome/Edge）。
  * 文档参考：https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API
@@ -117,5 +160,7 @@ router.afterEach((_to, _from) => {
   }
 })
 
+=======
+>>>>>>> feature-cui
 export default router
 export { routes }

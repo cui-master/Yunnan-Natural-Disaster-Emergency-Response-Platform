@@ -19,6 +19,7 @@ services:
       timeout: 5s
       retries: 10
 
+<<<<<<< HEAD
   mysql:
     image: mysql:8.0
     container_name: yn_mysql
@@ -41,6 +42,8 @@ services:
       timeout: 5s
       retries: 10
 
+=======
+>>>>>>> feature-cui
   redis:
     image: redis:7-alpine
     container_name: yn_redis
@@ -75,6 +78,7 @@ services:
     depends_on:
       - db
 
+<<<<<<< HEAD
   # ===== 四个业务系统（共享 PG 业务库 + MySQL 认证库）=====
   report-service:
     build:
@@ -195,6 +199,25 @@ services:
         condition: service_healthy
       mysql:
         condition: service_healthy
+=======
+  backend:
+    build: ./backend
+    container_name: yn_backend
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=emergency
+      - DB_USER=emergency
+      - DB_PASSWORD=emergency123
+      - REDIS_HOST=redis
+      - AI_SERVICE_URL=http://ai-service:8000
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+>>>>>>> feature-cui
       redis:
         condition: service_healthy
       ai-service:
@@ -206,6 +229,7 @@ services:
     ports:
       - "8088:80"
     depends_on:
+<<<<<<< HEAD
       - admin-service
       - report-service
       - command-service
@@ -214,4 +238,10 @@ services:
 volumes:
   db_data:
   mysql_data:
+=======
+      - backend
+
+volumes:
+  db_data:
+>>>>>>> feature-cui
   minio_data:

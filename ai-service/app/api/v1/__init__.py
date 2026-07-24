@@ -4,6 +4,13 @@ from .dispatch import router as dispatch_router
 from .workflow import router as workflow_router
 from .pipeline import router as pipeline_router
 from .knowledge_base import router as kb_router
+<<<<<<< HEAD
+=======
+from .reporter import router as reporter_router
+from .commander import router as commander_router
+from .resource import router as resource_router
+from .admin import router as admin_router
+>>>>>>> feature-cui
 
 v1_router = APIRouter()
 v1_router.include_router(graph_router)
@@ -11,5 +18,12 @@ v1_router.include_router(dispatch_router)
 v1_router.include_router(workflow_router)
 v1_router.include_router(pipeline_router)
 v1_router.include_router(kb_router)
+<<<<<<< HEAD
+=======
+v1_router.include_router(reporter_router)
+v1_router.include_router(commander_router)
+v1_router.include_router(resource_router)
+v1_router.include_router(admin_router)
+>>>>>>> feature-cui
 
 __all__ = ["v1_router"]

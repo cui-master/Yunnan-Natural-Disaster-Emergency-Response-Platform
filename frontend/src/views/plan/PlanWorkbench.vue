@@ -26,6 +26,7 @@ const plan = reactive({
 })
 
 const canGenerate = computed(() => !!selectedEventId.value && !streaming.value)
+<<<<<<< HEAD
 const activeIdx = computed(() => (plan.status === 'GENERATING' ? Math.max(0, plan.sections.length - 1) : -1))
 
 // AI 生成过程步骤条（连接 → 各处置要点 → 合规审查 → 完成）
@@ -56,6 +57,8 @@ const steps = computed<{ label: string; state: 'done' | 'active' | 'wait' }[]>((
   }
   return list
 })
+=======
+>>>>>>> feature-cui
 
 function loadEvents() {
   disaster.fetchList({ pageSize: 100 }).then(() => {
@@ -86,7 +89,11 @@ function onChunk(chunk: PlanStreamChunk) {
     case 'CONTENT': {
       const sec = plan.sections[chunk.sectionIndex ?? plan.sections.length - 1]
       if (sec) sec.content += chunk.delta || ''
+<<<<<<< HEAD
       streamingText.value = (sec?.content || '').slice(-48)
+=======
+      streamingText.value = (sec?.content || '').slice(-40)
+>>>>>>> feature-cui
       break
     }
     case 'REFERENCE':
@@ -167,10 +174,16 @@ onMounted(loadEvents)
     <el-card class="page-card">
       <template #header>
         <div class="flex-between">
+<<<<<<< HEAD
           <div class="section-title">应急方案生成工作台</div>
           <el-tag :type="plan.status === 'APPROVED' ? 'success' : 'warning'" effect="dark">{{ progress }}</el-tag>
         </div>
         <p class="head-sub">AI Agent 结合灾情 + RAG 预案生成，支持人工修改与合规审查</p>
+=======
+          <div><b>应急方案生成工作台</b><span class="text-muted"> AI Agent 结合灾情+RAG 预案生成，支持人工修改与合规审查</span></div>
+          <el-tag :type="plan.status === 'APPROVED' ? 'success' : 'warning'">{{ progress }}</el-tag>
+        </div>
+>>>>>>> feature-cui
       </template>
 
       <div class="toolbar">
@@ -186,6 +199,7 @@ onMounted(loadEvents)
         <span v-if="saveState === 'saved'" class="text-muted">已保存 ✓</span>
       </div>
 
+<<<<<<< HEAD
       <el-empty v-if="!plan.sections.length && !streaming" description="请选择灾情工单并点击「生成方案」" :image-size="90" />
 
       <div v-else class="gen-grid">
@@ -258,23 +272,71 @@ onMounted(loadEvents)
             </el-result>
           </template>
         </section>
+=======
+      <el-alert v-if="streaming" :title="streamingText || '连接 AI 服务，接收流式输出…'" type="info" :closable="false" show-icon style="margin: 12px 0" />
+
+      <el-empty v-if="!plan.sections.length && !streaming" description="请选择灾情工单并点击「生成方案」" />
+
+      <div v-else class="content">
+        <h2 class="plan-title">{{ plan.title }}</h2>
+        <div v-for="(sec, i) in plan.sections" :key="i" class="section">
+          <div class="sec-title">{{ sec.title }}</div>
+          <el-input
+            v-model="plan.sections[i].content"
+            type="textarea"
+            :rows="Math.max(3, Math.ceil(sec.content.length / 40))"
+            :disabled="streaming"
+            @input="saveState = 'idle'"
+          />
+        </div>
+
+        <template v-if="plan.references.length">
+          <div class="block-title">引用来源（RAG 检索）</div>
+          <el-table :data="plan.references" border size="small">
+            <el-table-column prop="docTitle" label="预案/规范" min-width="200" />
+            <el-table-column prop="snippet" label="片段" min-width="260" show-overflow-tooltip />
+            <el-table-column label="相关度" width="90">
+              <template #default="{ row }">{{ (row.score * 100).toFixed(0) }}%</template>
+            </el-table-column>
+          </el-table>
+        </template>
+
+        <template v-if="plan.compliance">
+          <div class="block-title">AI 合规审查</div>
+          <el-result
+            :icon="plan.compliance.passed ? 'success' : 'warning'"
+            :title="`合规评分 ${plan.compliance.score} 分 · ${plan.compliance.passed ? '通过' : '需修正'}`"
+          >
+            <template #extra>
+              <div class="comp">
+                <div v-if="plan.compliance.issues.length"><b>问题：</b>{{ plan.compliance.issues.join('；') }}</div>
+                <div v-if="plan.compliance.suggestions.length"><b>建议：</b>{{ plan.compliance.suggestions.join('；') }}</div>
+              </div>
+            </template>
+          </el-result>
+        </template>
+>>>>>>> feature-cui
       </div>
     </el-card>
   </div>
 </template>
 
 <style scoped>
+<<<<<<< HEAD
 .head-sub {
   margin: 6px 0 0;
   font-size: 12px;
   color: var(--ydr-sub);
 }
+=======
+>>>>>>> feature-cui
 .toolbar {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
 .gen-grid {
   display: grid;
   grid-template-columns: 280px 1fr;
@@ -474,6 +536,28 @@ onMounted(loadEvents)
   font-weight: 600;
   margin: 18px 0 8px;
   color: var(--ydr-ink);
+=======
+.content {
+  margin-top: 16px;
+}
+.plan-title {
+  font-size: 20px;
+  margin: 0 0 14px;
+  color: #1f2d3d;
+}
+.section {
+  margin-bottom: 14px;
+}
+.sec-title {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #c0392b;
+}
+.block-title {
+  font-weight: 600;
+  margin: 18px 0 8px;
+  color: #1f2d3d;
+>>>>>>> feature-cui
 }
 .comp {
   text-align: left;
@@ -481,6 +565,7 @@ onMounted(loadEvents)
   color: #606266;
   line-height: 1.8;
 }
+<<<<<<< HEAD
 @media (max-width: 900px) {
   .gen-grid {
     grid-template-columns: 1fr;
@@ -489,4 +574,6 @@ onMounted(loadEvents)
     position: static;
   }
 }
+=======
+>>>>>>> feature-cui
 </style>

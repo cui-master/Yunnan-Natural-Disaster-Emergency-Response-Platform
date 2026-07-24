@@ -1,9 +1,16 @@
 <script setup lang="ts">
+<<<<<<< HEAD
 import { computed, onMounted, onBeforeUnmount, onActivated, onDeactivated, ref } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useDisasterStore } from '@/stores/disaster'
 import { useAuthStore } from '@/stores/auth'
 import { useNotificationsStore } from '@/stores/notifications'
+=======
+import { computed, onMounted, onBeforeUnmount, ref } from 'vue'
+import { storeToRefs } from 'pinia'
+import { useDisasterStore } from '@/stores/disaster'
+import { useAuthStore } from '@/stores/auth'
+>>>>>>> feature-cui
 import DisasterMap from '@/components/DisasterMap.vue'
 import StatCard from '@/components/StatCard.vue'
 import EChart from '@/components/EChart.vue'
@@ -15,7 +22,10 @@ import type { RealtimeEvent } from '@/types'
 
 const disaster = useDisasterStore()
 const auth = useAuthStore()
+<<<<<<< HEAD
 const notifications = useNotificationsStore()
+=======
+>>>>>>> feature-cui
 const { list, stat, typeCount, cityCount, trend } = storeToRefs(disaster)
 
 const realtime = ref<RealtimeEvent[]>([])
@@ -23,8 +33,11 @@ const connected = ref(false)
 let ws: { close: () => void } | null = null
 let timer: number | null = null
 let rid = 1
+<<<<<<< HEAD
 let clockTimer: number | null = null
 const now = ref(new Date())
+=======
+>>>>>>> feature-cui
 
 const typeLabel: Record<string, string> = {
   EARTHQUAKE: '地震',
@@ -62,7 +75,11 @@ function startMockFeed() {
     if (!list.value.length) return
     const d = list.value[Math.floor(Math.random() * list.value.length)]
     const m = messages[Math.floor(Math.random() * messages.length)]
+<<<<<<< HEAD
     const event = {
+=======
+    pushRealtime({
+>>>>>>> feature-cui
       id: rid++,
       eventId: d.id,
       eventCode: d.code,
@@ -70,6 +87,7 @@ function startMockFeed() {
       message: m.msg(d),
       status: d.status as any,
       createdAt: new Date().toISOString()
+<<<<<<< HEAD
     }
     pushRealtime(event)
     // 关键事件联动消息盒子（避免刷屏：仅新增灾情 / 资源调度）
@@ -103,6 +121,12 @@ function stopFeed() {
   connected.value = false
 }
 
+=======
+    })
+  }, 4500)
+}
+
+>>>>>>> feature-cui
 function startRealFeed() {
   ws = openWs(
     import.meta.env.VITE_WS_BASE,
@@ -116,6 +140,7 @@ function startRealFeed() {
   )
 }
 
+<<<<<<< HEAD
 const palette = ['#36e0c8', '#ffb547', '#4aa8ff', '#5ee06b', '#b07cff', '#ff6b8a', '#ffd166', '#4cc9f0']
 
 // 图表配置（光明大屏风格）
@@ -139,11 +164,25 @@ const pieOption = computed(() => ({
       label: { color: TEXT, fontSize: 11 },
       labelLine: { lineStyle: { color: SUB } },
       data: typeCount.value.map((t) => ({ name: typeLabel[t.type] || t.type, value: t.count }))
+=======
+// 图表配置
+const pieOption = computed(() => ({
+  tooltip: { trigger: 'item' },
+  legend: { bottom: 0, type: 'scroll' },
+  series: [
+    {
+      type: 'pie',
+      radius: ['40%', '68%'],
+      center: ['50%', '45%'],
+      data: typeCount.value.map((t) => ({ name: typeLabel[t.type] || t.type, value: t.count })),
+      label: { show: false }
+>>>>>>> feature-cui
     }
   ]
 }))
 
 const barOption = computed(() => ({
+<<<<<<< HEAD
   backgroundColor: 'transparent',
   textStyle: { color: TEXT },
   tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, backgroundColor: 'rgba(255,255,255,0.96)', borderColor: '#e2e8f0', textStyle: { color: TEXT } },
@@ -217,11 +256,27 @@ const lineOption = computed(() => ({
       }
     }
   ]
+=======
+  tooltip: { trigger: 'axis' },
+  grid: { left: 60, right: 20, top: 20, bottom: 50 },
+  xAxis: { type: 'category', data: cityCount.value.map((c) => c.city), axisLabel: { interval: 0, rotate: 35, fontSize: 10 } },
+  yAxis: { type: 'value' },
+  series: [{ type: 'bar', data: cityCount.value.map((c) => c.count), itemStyle: { color: '#c0392b', borderRadius: [4, 4, 0, 0] } }]
+}))
+
+const lineOption = computed(() => ({
+  tooltip: { trigger: 'axis' },
+  grid: { left: 40, right: 20, top: 20, bottom: 30 },
+  xAxis: { type: 'category', data: trend.value.map((t) => t.date) },
+  yAxis: { type: 'value' },
+  series: [{ type: 'line', smooth: true, data: trend.value.map((t) => t.count), areaStyle: { opacity: 0.15 }, itemStyle: { color: '#2980b9' } }]
+>>>>>>> feature-cui
 }))
 
 onMounted(async () => {
   await disaster.fetchStat()
   await disaster.fetchList({ pageSize: 100 })
+<<<<<<< HEAD
   clockTimer = window.setInterval(() => (now.value = new Date()), 1000)
 })
 
@@ -317,10 +372,65 @@ const timeText = computed(() => now.value.toLocaleTimeString('zh-CN', { hour12: 
         </div>
       </div>
     </section>
+=======
+  if (USE_MOCK) startMockFeed()
+  else startRealFeed()
+})
+
+onBeforeUnmount(() => {
+  if (timer) clearInterval(timer)
+  ws?.close()
+})
+</script>
+
+<template>
+  <div class="dashboard">
+    <!-- 统计卡片 -->
+    <div class="stats">
+      <StatCard title="灾情总数" :value="stat?.eventTotal ?? 0" icon="Warning" color="#c0392b" />
+      <StatCard title="处置中" :value="stat?.handlingCount ?? 0" icon="Loading" color="#e67e22" />
+      <StatCard title="待核验" :value="stat?.pendingVerifyCount ?? 0" icon="Bell" color="#f1c40f" />
+      <StatCard title="受影响人口" :value="(stat?.affectedPopulation ?? 0).toLocaleString()" icon="User" color="#2980b9" />
+      <StatCard title="可调资源" :value="stat?.resourceIdle ?? 0" icon="Box" color="#27ae60" />
+      <StatCard title="伤亡(人)" :value="stat?.casualties ?? 0" icon="FirstAidKit" color="#8e44ad" />
+    </div>
+
+    <div class="grid">
+      <!-- 地图 -->
+      <div class="panel map-panel">
+        <div class="panel-title">灾情态势地图</div>
+        <div class="map-wrap">
+          <DisasterMap :events="list" />
+        </div>
+      </div>
+
+      <!-- 实时事件 -->
+      <div class="panel">
+        <div class="panel-title">实时事件流</div>
+        <EventTicker :events="realtime" :connected="connected" />
+      </div>
+    </div>
+
+    <div class="grid charts">
+      <div class="panel">
+        <div class="panel-title">灾害类型分布</div>
+        <EChart :option="pieOption" height="260px" />
+      </div>
+      <div class="panel">
+        <div class="panel-title">各地州灾情数量</div>
+        <EChart :option="barOption" height="260px" />
+      </div>
+      <div class="panel">
+        <div class="panel-title">近 7 日灾情趋势</div>
+        <EChart :option="lineOption" height="260px" />
+      </div>
+    </div>
+>>>>>>> feature-cui
   </div>
 </template>
 
 <style scoped>
+<<<<<<< HEAD
 .screen {
   /* 满血铺满内容区（相对 .main 绝对定位，无视 padding，形成全屏大屏） */
   position: absolute;
@@ -508,5 +618,51 @@ const timeText = computed(() => now.value.toLocaleTimeString('zh-CN', { hour12: 
   .scr-body { grid-template-columns: 1fr; grid-auto-rows: minmax(280px, auto); overflow: auto; }
   .scr-side { min-width: 0; }
   .scr-title-main { font-size: 20px; }
+=======
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 14px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 14px;
+}
+.grid.charts {
+  grid-template-columns: repeat(3, 1fr);
+}
+.panel {
+  background: #fff;
+  border-radius: 8px;
+  padding: 14px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+}
+.panel-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #1f2d3d;
+}
+.map-wrap {
+  flex: 1;
+  min-height: 420px;
+}
+@media (max-width: 1200px) {
+  .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid,
+  .grid.charts {
+    grid-template-columns: 1fr;
+  }
+>>>>>>> feature-cui
 }
 </style>

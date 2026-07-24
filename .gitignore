@@ -32,6 +32,7 @@ Thumbs.db
 
 # Uploads
 backend/uploads/
+<<<<<<< HEAD
 
 # Frontend build artifacts
 *.tsbuildinfo
@@ -57,3 +58,5 @@ data-pipeline/.pytest_cache/
 frontend/mobile/node_modules/
 frontend/mobile/.next/
 frontend/mobile/out/
+=======
+>>>>>>> feature-cui

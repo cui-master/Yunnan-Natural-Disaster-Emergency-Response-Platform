@@ -87,9 +87,13 @@ export function generatePlanStream(
   if (USE_MOCK) {
     return simulatePlanStream(data.eventId, onChunk as (c: any) => void, data.extraRequirement)
   }
+<<<<<<< HEAD
   // EventSource 无法设置 Authorization header，token 通过 query 参数传递（后端 JwtFilter 会兜底读取）
   const token = localStorage.getItem('token') || ''
   const es = new EventSource('/api/incidents/' + data.eventId + '/plan?token=' + encodeURIComponent(token))
+=======
+  const es = new EventSource('/api/incidents/' + data.eventId + '/plan')
+>>>>>>> feature-cui
   es.addEventListener('progress', (ev: MessageEvent) => {
     onChunk({ type: 'SECTION', title: ev.data })
   })
