@@ -53,11 +53,22 @@ onMounted(() => {
 
 <template>
   <div class="sys">
+    <!-- 技术控制台状态头：靛蓝精确风，等宽指标 -->
+    <div class="console-head">
+      <div class="console-title">
+        <span class="console-mark">SYS</span>
+        <div>
+          <h2>系统管理控制台</h2>
+          <p>用户 · 角色权限（RBAC） · 系统配置</p>
+        </div>
+      </div>
+      <div class="console-metrics">
+        <div class="metric"><span class="m-num">{{ users.length }}</span><span class="m-label">用户</span></div>
+        <div class="metric"><span class="m-num">{{ roles.length }}</span><span class="m-label">角色</span></div>
+        <div class="metric"><span class="m-num">{{ configs.length }}</span><span class="m-label">配置项</span></div>
+      </div>
+    </div>
     <el-card class="page-card">
-      <template #header>
-        <div class="section-title">系统管理</div>
-        <div class="head-sub">用户、角色权限（RBAC）与系统配置的统一维护</div>
-      </template>
       <el-tabs v-model="activeTab">
         <!-- 用户管理 -->
         <el-tab-pane label="用户管理" name="user">
@@ -124,6 +135,78 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.sys {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* 靛蓝技术控制台状态头：点阵底纹 + 等宽指标 */
+.console-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 18px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(79, 89, 191, 0.18);
+  background:
+    radial-gradient(rgba(79, 89, 191, 0.14) 1px, transparent 1px) 0 0 / 14px 14px,
+    linear-gradient(120deg, rgba(79, 89, 191, 0.08), rgba(79, 89, 191, 0.02));
+}
+.console-title {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.console-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  background: #4f59bf;
+  color: #fff;
+  font-family: var(--ydr-mono, 'Consolas', monospace);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 6px 16px rgba(79, 89, 191, 0.3);
+}
+.console-title h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ydr-ink);
+}
+.console-title p {
+  margin: 2px 0 0;
+  font-size: 12px;
+  color: var(--ydr-sub);
+  letter-spacing: 1px;
+}
+.console-metrics {
+  display: flex;
+  gap: 26px;
+}
+.metric {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+}
+.m-num {
+  font-family: var(--ydr-mono, 'Consolas', monospace);
+  font-size: 20px;
+  font-weight: 700;
+  color: #4f59bf;
+  font-variant-numeric: tabular-nums;
+}
+.m-label {
+  font-size: 12px;
+  color: var(--ydr-sub);
+}
 .bar {
   margin-bottom: 12px;
 }

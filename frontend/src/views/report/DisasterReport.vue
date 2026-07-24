@@ -116,8 +116,22 @@ async function onSubmit() {
 
 <template>
   <div class="report">
+    <!-- 亲和引导头：信息员浅青风格，降低填报压力 -->
+    <div class="report-hero">
+      <div class="hero-main">
+        <h2>灾情上报</h2>
+        <p>请如实填写现场信息，提交后将进入「待核验」队列，由指挥中心审核处理。</p>
+      </div>
+      <div class="hero-steps">
+        <span class="step done">① 填写信息</span>
+        <span class="step-arrow">→</span>
+        <span class="step">② 待核验</span>
+        <span class="step-arrow">→</span>
+        <span class="step">③ 指挥处置</span>
+      </div>
+    </div>
     <el-card class="page-card">
-      <template #header><b>灾情上报</b><span class="text-muted">（上报后进入「待核验」工单状态）</span></template>
+      <template #header><b>现场信息填报</b><span class="text-muted">（带 * 为必填项）</span></template>
       <el-form ref="formRef" :model="form" :rules="rules" label-width="110px" style="max-width: 880px">
         <el-row :gutter="20">
           <el-col :span="12">
@@ -203,3 +217,56 @@ async function onSubmit() {
     </el-card>
   </div>
 </template>
+
+<style scoped>
+.report {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+/* 信息员亲和引导头：薄荷青渐变、大圆角、留白 */
+.report-hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 14px;
+  padding: 22px 26px;
+  border-radius: 18px;
+  background: linear-gradient(120deg, rgba(22, 160, 133, 0.12), rgba(22, 160, 133, 0.04) 60%, rgba(77, 163, 255, 0.06));
+  border: 1px solid rgba(22, 160, 133, 0.18);
+}
+.hero-main h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--ydr-ink);
+}
+.hero-main p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--ydr-sub);
+}
+.hero-steps {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ydr-sub);
+}
+.hero-steps .step {
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(22, 160, 133, 0.2);
+}
+.hero-steps .step.done {
+  background: rgba(22, 160, 133, 0.92);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(22, 160, 133, 0.25);
+}
+.step-arrow {
+  color: rgba(22, 160, 133, 0.5);
+}
+</style>

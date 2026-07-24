@@ -17,6 +17,17 @@
   --ydr-border-strong: oklch(86% 0.008 255);
 
   --ydr-radius: 12px;
+  --ydr-radius-control: 10px;
+  /* 面板底色（随主题变为深/浅，是四种风格差异化的关键） */
+  --ydr-surface: #ffffff;
+  --ydr-panel: #ffffff;
+  /* 等宽数字字体（指挥/调度场景的数据对齐） */
+  --ydr-mono: ui-monospace, 'SFMono-Regular', 'JetBrains Mono', 'Roboto Mono', Menlo, Consolas, monospace;
+  /* 信号灯语义色（工业/调度台用） */
+  --sig-red: #ff4d4d;
+  --sig-amber: #e8a317;
+  --sig-green: #2ecc71;
+  --sig-blue: #4ea8ff;
   /* 阴影带品牌冷调，更自然 */
   --ydr-shadow: 0 6px 20px oklch(24% 0.02 255 / 0.07);
   --ydr-shadow-lg: 0 14px 34px oklch(24% 0.02 255 / 0.11);
@@ -64,37 +75,91 @@
    - 竖排导航：资源管理员(琥珀操作台) / 系统管理员(靛蓝控制台)
    ============================================================ */
 
-/* —— 指挥员：应急红 / 深蓝指挥风（横排·深色顶栏·冷灰画布） —— */
+/* —— 指挥员：深色作战室（Palantir / 任务控制风） —— */
 .theme-commander {
-  --ydr-primary: #e03e2f;
-  --ydr-primary-soft: #fdece9;
-  --ydr-primary-dark: #b33226;
-  --ydr-bg: oklch(96% 0.008 255);
-  --role-sidebar-bg: linear-gradient(180deg, #0e1b2e 0%, #16263a 100%);
-  --role-sidebar-grad: linear-gradient(90deg, #e03e2f, #f2994a);
-  --role-sidebar-text: #cdd6e3;
-  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
-  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
-  --el-color-primary: #e03e2f;
-  --el-color-primary-light-3: #ec6f64;
-  --el-color-primary-light-5: #f29a92;
-  --el-color-primary-light-7: #f8c4be;
-  --el-color-primary-light-8: #fbd9d4;
-  --el-color-primary-light-9: #fdeeeb;
-  --el-color-primary-dark-2: #b33226;
+  /* 近黑深蓝底 + 深色面板，沉浸式指挥大屏 */
+  --ydr-bg: #090d15;
+  --ydr-surface: #121a28;
+  --ydr-panel: #0e1622;
+  --ydr-text: #c3cde0;
+  --ydr-ink: #f3f6fb;
+  --ydr-sub: #8896ad;
+  --ydr-border: #233246;
+  --ydr-border-strong: #2f425c;
+  --ydr-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  --ydr-shadow-lg: 0 20px 48px rgba(0, 0, 0, 0.55);
+  --ydr-radius: 10px;
+  --ydr-radius-control: 8px;
+
+  /* 应急红强调（暗底上更亮，用于危机/CTA/聚焦） */
+  --ydr-primary: #ff4d3d;
+  --ydr-primary-soft: rgba(255, 77, 61, 0.16);
+  --ydr-primary-dark: #d23a2c;
+
+  /* 信号灯（暗底应急语义） */
+  --sig-red: #ff5a4d;
+  --sig-amber: #ffb13d;
+  --sig-green: #36d399;
+  --sig-blue: #5aa9ff;
+
+  /* 侧栏/顶栏：深色渐变 + 红橙聚焦条 */
+  --role-sidebar-bg: linear-gradient(180deg, #0b1322 0%, #101d33 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #ff4d3d, #ff8a3d);
+  --role-sidebar-text: #c3cde0;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.45);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.07);
+
+  /* 危机聚焦发光 */
+  --ydr-glow: 0 0 0 1px rgba(255, 77, 61, 0.45), 0 0 22px rgba(255, 77, 61, 0.28);
+
+  /* Element Plus 暗色覆盖 */
+  --el-color-primary: #ff4d3d;
+  --el-color-primary-light-3: #ff7a6e;
+  --el-color-primary-light-5: #ff9d94;
+  --el-color-primary-light-7: #ffc3bc;
+  --el-color-primary-light-8: #ffd8d3;
+  --el-color-primary-light-9: #2a1714;
+  --el-color-primary-dark-2: #d23a2c;
+  --el-bg-color: #121a28;
+  --el-bg-color-overlay: #162030;
+  --el-bg-color-page: #090d15;
+  --el-fill-color-blank: #121a28;
+  --el-fill-color: #1b2434;
+  --el-fill-color-light: #18222f;
+  --el-text-color-primary: #e8edf5;
+  --el-text-color-regular: #c3cde0;
+  --el-text-color-secondary: #8896ad;
+  --el-border-color: #233246;
+  --el-border-color-light: #1c2839;
+  --el-border-color-lighter: #18222f;
+  --el-mask-color: rgba(9, 13, 21, 0.85);
 }
 
-/* —— 信息员：青绿 / 轻量明亮风（横排·浅色顶栏·浅青画布） —— */
+/* —— 信息员：浅色安抚上报台（薄荷青 · 圆润 · 留白 · 亲和） —— */
 .theme-reporter {
+  --ydr-bg: #eef6f5;
+  --ydr-surface: #ffffff;
+  --ydr-panel: #ffffff;
+  --ydr-text: #2f4a47;
+  --ydr-ink: #143029;
+  --ydr-sub: #5f7c77;
+  --ydr-border: #d9ebe7;
+  --ydr-border-strong: #c4e0db;
+  --ydr-shadow: 0 10px 28px rgba(14, 165, 160, 0.10);
+  --ydr-shadow-lg: 0 18px 40px rgba(14, 165, 160, 0.16);
+  --ydr-radius: 16px;
+  --ydr-radius-control: 12px;
+
   --ydr-primary: #0ea5a0;
   --ydr-primary-soft: #e6f7f6;
   --ydr-primary-dark: #0b7d79;
-  --ydr-bg: oklch(97% 0.022 175);
+
   --role-sidebar-bg: linear-gradient(180deg, #0c2b2a 0%, #10403d 100%);
   --role-sidebar-grad: linear-gradient(90deg, #0ea5a0, #34d399);
   --role-sidebar-text: #c8e8e6;
   --role-sidebar-muted: rgba(255, 255, 255, 0.42);
   --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+
   --el-color-primary: #0ea5a0;
   --el-color-primary-light-3: #4cc1bc;
   --el-color-primary-light-5: #7fd2ce;
@@ -104,37 +169,84 @@
   --el-color-primary-dark-2: #0b7d79;
 }
 
-/* —— 资源管理员：琥珀 / 操作台风（竖排·琥珀侧栏·浅琥珀画布） —— */
+/* —— 资源管理员：琥珀工业调度台（钢灰底 · 琥珀信号色 · LED 状态灯） —— */
 .theme-resmgr {
-  --ydr-primary: #e08a1e;
-  --ydr-primary-soft: #fdf2e2;
-  --ydr-primary-dark: #b06d12;
-  --ydr-bg: oklch(97% 0.02 75);
-  --role-sidebar-bg: linear-gradient(180deg, #241a0e 0%, #2e2412 100%);
-  --role-sidebar-grad: linear-gradient(90deg, #e08a1e, #f2b705);
-  --role-sidebar-text: #ecdcc2;
-  --role-sidebar-muted: rgba(255, 255, 255, 0.42);
-  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
-  --el-color-primary: #e08a1e;
-  --el-color-primary-light-3: #eaa854;
-  --el-color-primary-light-5: #f1c184;
-  --el-color-primary-light-7: #f8dcb3;
-  --el-color-primary-light-8: #fbe8cf;
-  --el-color-primary-light-9: #fdf2e2;
-  --el-color-primary-dark-2: #b06d12;
+  --ydr-bg: #0e1014;
+  --ydr-surface: #181b21;
+  --ydr-panel: #14171c;
+  --ydr-text: #d8d3c8;
+  --ydr-ink: #f4f0e6;
+  --ydr-sub: #998f7f;
+  --ydr-border: #2a2e35;
+  --ydr-border-strong: #363b44;
+  --ydr-shadow: 0 10px 30px rgba(0, 0, 0, 0.42);
+  --ydr-shadow-lg: 0 18px 44px rgba(0, 0, 0, 0.52);
+  --ydr-radius: 8px;
+  --ydr-radius-control: 7px;
+
+  /* 琥珀仅用于状态/CTA，绝不泛装饰 */
+  --ydr-primary: #e8a317;
+  --ydr-primary-soft: rgba(232, 163, 23, 0.16);
+  --ydr-primary-dark: #b9830f;
+
+  --sig-red: #ff5a4d;
+  --sig-amber: #e8a317;
+  --sig-green: #36d399;
+  --sig-blue: #5aa9ff;
+
+  --role-sidebar-bg: linear-gradient(180deg, #16181d 0%, #1d2027 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #e8a317, #ffce5c);
+  --role-sidebar-text: #d8d3c8;
+  --role-sidebar-muted: rgba(255, 255, 255, 0.4);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.06);
+
+  --el-color-primary: #e8a317;
+  --el-color-primary-light-3: #eeb54a;
+  --el-color-primary-light-5: #f3c87e;
+  --el-color-primary-light-7: #f8dcab;
+  --el-color-primary-light-8: #fbe9c8;
+  --el-color-primary-light-9: #2a2415;
+  --el-color-primary-dark-2: #b9830f;
+  --el-bg-color: #181b21;
+  --el-bg-color-overlay: #1e222a;
+  --el-bg-color-page: #0e1014;
+  --el-fill-color-blank: #181b21;
+  --el-fill-color: #22262e;
+  --el-fill-color-light: #1d2128;
+  --el-text-color-primary: #f0ece2;
+  --el-text-color-regular: #d8d3c8;
+  --el-text-color-secondary: #998f7f;
+  --el-border-color: #2a2e35;
+  --el-border-color-light: #22262e;
+  --el-border-color-lighter: #1d2128;
+  --el-mask-color: rgba(14, 16, 20, 0.85);
 }
 
-/* —— 管理员：靛蓝 / 控制台风（竖排·靛蓝侧栏·浅靛画布） —— */
+/* —— 系统管理员：靛蓝技术控制台（浅底 · 精确栅格 · 点阵纹理） —— */
 .theme-admin {
+  --ydr-bg: #f3f4fb;
+  --ydr-surface: #ffffff;
+  --ydr-panel: #ffffff;
+  --ydr-text: #3a3f55;
+  --ydr-ink: #1d2138;
+  --ydr-sub: #6b7194;
+  --ydr-border: #e4e7f3;
+  --ydr-border-strong: #d2d7ef;
+  --ydr-shadow: 0 10px 28px rgba(79, 70, 229, 0.08);
+  --ydr-shadow-lg: 0 18px 40px rgba(79, 70, 229, 0.14);
+  --ydr-radius: 12px;
+  --ydr-radius-control: 9px;
+
   --ydr-primary: #4f46e5;
   --ydr-primary-soft: #eceafe;
   --ydr-primary-dark: #3f37b8;
-  --ydr-bg: oklch(97% 0.018 280);
+
   --role-sidebar-bg: linear-gradient(180deg, #141532 0%, #1d1f47 100%);
   --role-sidebar-grad: linear-gradient(90deg, #4f46e5, #7c6ff0);
   --role-sidebar-text: #d3d2f0;
   --role-sidebar-muted: rgba(255, 255, 255, 0.42);
   --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+
   --el-color-primary: #4f46e5;
   --el-color-primary-light-3: #7d76ec;
   --el-color-primary-light-5: #9a94f1;
@@ -392,4 +504,132 @@ body {
 }
 .ydr-popup-meta span {
   color: #5a6675;
+}
+
+/* ============================================================
+   主题强制贯穿 + 四种风格差异化装饰
+   组件内硬编码 #fff 的面板在此按主题统一覆盖，确保深色主题真正沉浸。
+   ============================================================ */
+
+/* 1) 深色主题：强制面板/卡片/指令条底色与文字（覆盖组件硬编码白底） */
+.theme-commander .panel,
+.theme-commander .page-card,
+.theme-commander .stat-card,
+.theme-commander .cmdbar,
+.theme-resmgr .panel,
+.theme-resmgr .page-card,
+.theme-resmgr .stat-card,
+.theme-resmgr .cmdbar {
+  background: var(--ydr-surface) !important;
+  border-color: var(--ydr-border) !important;
+  color: var(--ydr-text) !important;
+}
+.theme-commander .panel-title,
+.theme-resmgr .panel-title,
+.theme-commander .cmd-title,
+.theme-resmgr .cmd-title,
+.theme-commander .section-title,
+.theme-resmgr .section-title {
+  color: var(--ydr-ink) !important;
+}
+.theme-commander .el-card,
+.theme-resmgr .el-card {
+  background: var(--ydr-surface) !important;
+  border-color: var(--ydr-border) !important;
+  color: var(--ydr-text) !important;
+}
+.theme-commander .el-input__wrapper,
+.theme-resmgr .el-input__wrapper {
+  background: var(--ydr-panel) !important;
+  box-shadow: 0 0 0 1px var(--ydr-border) inset !important;
+}
+
+/* 2) 按角色统一圆角语言（区分「锐角作战室 / 圆润安抚台 / 工业台 / 技术台」） */
+.theme-commander .panel,
+.theme-commander .page-card,
+.theme-commander .stat-card { border-radius: 10px !important; }
+.theme-reporter .panel,
+.theme-reporter .page-card,
+.theme-reporter .stat-card { border-radius: 18px !important; }
+.theme-resmgr .panel,
+.theme-resmgr .page-card,
+.theme-resmgr .stat-card { border-radius: 8px !important; }
+.theme-admin .panel,
+.theme-admin .page-card,
+.theme-admin .stat-card { border-radius: 14px !important; }
+
+/* 3) 信号灯工具类（工业/调度台状态指示，红=故障 黄=预警 绿=正常 蓝=需处置） */
+.led {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  flex: none;
+}
+.led--red { background: var(--sig-red); box-shadow: 0 0 8px var(--sig-red); }
+.led--amber { background: var(--sig-amber); box-shadow: 0 0 8px var(--sig-amber); }
+.led--green { background: var(--sig-green); box-shadow: 0 0 8px var(--sig-green); }
+.led--blue { background: var(--sig-blue); box-shadow: 0 0 8px var(--sig-blue); }
+
+/* 4) 指挥员：深色作战室（网格底纹 + 顶栏发光聚焦条 + 激活菜单辉光 + 大写标签） */
+.theme-commander .htop--dark .htop {
+  background:
+    linear-gradient(180deg, rgba(13, 22, 40, 0.97), rgba(16, 29, 51, 0.97)),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 26px),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 26px);
+  box-shadow: 0 1px 0 rgba(255, 77, 61, 0.5), 0 10px 30px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+.theme-commander .htop--dark .htop::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--ydr-primary), transparent);
+  opacity: 0.85;
+}
+.theme-commander .hmenu .el-menu-item {
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+.theme-commander .hmenu .el-menu-item.is-active {
+  color: #fff !important;
+  text-shadow: 0 0 12px rgba(255, 77, 61, 0.6);
+}
+
+/* 5) 信息员：浅色安抚（毛玻璃顶栏 + 柔和圆角 + 友好字重） */
+.theme-reporter .htop--light .htop {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--ydr-border);
+}
+.theme-reporter .hmenu .el-menu-item {
+  font-weight: 600;
+}
+
+/* 6) 资源管理员：琥珀工业调度台（侧栏信号条 + 在线绿灯 + 功能化外观） */
+.theme-resmgr .side {
+  box-shadow: inset 3px 0 0 var(--ydr-primary);
+}
+.theme-resmgr .side-foot .dot {
+  background: var(--sig-green);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.18), 0 0 10px rgba(46, 204, 113, 0.5);
+}
+.theme-resmgr .hmenu .el-menu-item,
+.theme-resmgr .side .el-menu-item {
+  font-family: var(--ydr-mono);
+  letter-spacing: 0.02em;
+}
+
+/* 7) 系统管理员：靛蓝技术控制台（侧栏点阵 + 内容区点阵栅格） */
+.theme-admin .side {
+  background-color: #141532;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+.theme-admin .main {
+  background-image: radial-gradient(rgba(79, 70, 229, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
 }

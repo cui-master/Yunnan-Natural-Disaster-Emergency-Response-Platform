@@ -24,6 +24,16 @@ let ws: { close: () => void } | null = null
 let timer: number | null = null
 let rid = 1
 
+// 作战室实时时钟（等宽数字，每秒刷新）
+const now = ref(new Date())
+let clockTimer: number | null = null
+const clockTime = computed(() =>
+  now.value.toLocaleTimeString('zh-CN', { hour12: false })
+)
+const clockDate = computed(() =>
+  now.value.toLocaleDateString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', weekday: 'short' })
+)
+
 const typeLabel: Record<string, string> = {
   EARTHQUAKE: '地震',
   FLOOD: '洪涝',
@@ -114,19 +124,29 @@ function startRealFeed() {
   )
 }
 
-const palette = ['#e03e2f', '#f2994a', '#2f80ed', '#27ae60', '#8e44ad', '#16a085', '#e67e22', '#2980b9']
+const palette = ['#ff4d3d', '#f2994a', '#4da3ff', '#2ecc71', '#b478f0', '#1abc9c', '#e67e22', '#5dade2']
+
+// 深色作战室图表基调（指挥员大屏专用：浅字、暗分隔线、深色描边）
+const AXIS_TEXT = '#8fa3bd'
+const AXIS_LINE = 'rgba(148, 170, 199, 0.22)'
+const SPLIT_LINE = 'rgba(148, 170, 199, 0.12)'
+const DARK_TOOLTIP = {
+  backgroundColor: 'rgba(14, 22, 34, 0.94)',
+  borderColor: 'rgba(148, 170, 199, 0.25)',
+  textStyle: { color: '#dce6f2' }
+}
 
 // 图表配置
 const pieOption = computed(() => ({
-  tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)' },
-  legend: { bottom: 0, type: 'scroll', icon: 'circle' },
+  tooltip: { trigger: 'item', formatter: '{b}: {c} ({d}%)', ...DARK_TOOLTIP },
+  legend: { bottom: 0, type: 'scroll', icon: 'circle', textStyle: { color: AXIS_TEXT }, pageTextStyle: { color: AXIS_TEXT } },
   color: palette,
   series: [
     {
       type: 'pie',
       radius: ['42%', '70%'],
       center: ['50%', '44%'],
-      itemStyle: { borderColor: '#fff', borderWidth: 2, borderRadius: 6 },
+      itemStyle: { borderColor: '#0e1622', borderWidth: 2, borderRadius: 6 },
       label: { show: false },
       data: typeCount.value.map((t) => ({ name: typeLabel[t.type] || t.type, value: t.count }))
     }
@@ -134,18 +154,18 @@ const pieOption = computed(() => ({
 }))
 
 const barOption = computed(() => ({
-  tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+  tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' }, ...DARK_TOOLTIP },
   grid: { left: 50, right: 16, top: 16, bottom: 56 },
   xAxis: {
     type: 'category',
     data: cityCount.value.map((c) => c.city),
-    axisLabel: { interval: 0, rotate: 35, fontSize: 11, color: '#7a8794' },
-    axisLine: { lineStyle: { color: '#e6eaf1' } }
+    axisLabel: { interval: 0, rotate: 35, fontSize: 11, color: AXIS_TEXT },
+    axisLine: { lineStyle: { color: AXIS_LINE } }
   },
   yAxis: {
     type: 'value',
-    axisLabel: { color: '#7a8794' },
-    splitLine: { lineStyle: { color: '#f0f2f6' } }
+    axisLabel: { color: AXIS_TEXT },
+    splitLine: { lineStyle: { color: SPLIT_LINE } }
   },
   series: [
     {
@@ -153,7 +173,7 @@ const barOption = computed(() => ({
       data: cityCount.value.map((c) => c.count),
       barWidth: '46%',
       itemStyle: {
-        borderRadius: [6, 6, 0, 0],
+        borderRadius: [3, 3, 0, 0],
         color: {
           type: 'linear',
           x: 0,
@@ -162,7 +182,7 @@ const barOption = computed(() => ({
           y2: 1,
           colorStops: [
             { offset: 0, color: '#f2994a' },
-            { offset: 1, color: '#e03e2f' }
+            { offset: 1, color: '#ff4d3d' }
           ]
         }
       }
@@ -171,18 +191,18 @@ const barOption = computed(() => ({
 }))
 
 const lineOption = computed(() => ({
-  tooltip: { trigger: 'axis' },
+  tooltip: { trigger: 'axis', ...DARK_TOOLTIP },
   grid: { left: 40, right: 16, top: 16, bottom: 30 },
   xAxis: {
     type: 'category',
     data: trend.value.map((t) => t.date),
-    axisLabel: { color: '#7a8794' },
-    axisLine: { lineStyle: { color: '#e6eaf1' } }
+    axisLabel: { color: AXIS_TEXT },
+    axisLine: { lineStyle: { color: AXIS_LINE } }
   },
   yAxis: {
     type: 'value',
-    axisLabel: { color: '#7a8794' },
-    splitLine: { lineStyle: { color: '#f0f2f6' } }
+    axisLabel: { color: AXIS_TEXT },
+    splitLine: { lineStyle: { color: SPLIT_LINE } }
   },
   series: [
     {
@@ -191,8 +211,8 @@ const lineOption = computed(() => ({
       symbol: 'circle',
       symbolSize: 7,
       data: trend.value.map((t) => t.count),
-      lineStyle: { width: 3, color: '#2f80ed' },
-      itemStyle: { color: '#2f80ed' },
+      lineStyle: { width: 3, color: '#4da3ff' },
+      itemStyle: { color: '#4da3ff' },
       areaStyle: {
         color: {
           type: 'linear',
@@ -201,8 +221,8 @@ const lineOption = computed(() => ({
           x2: 0,
           y2: 1,
           colorStops: [
-            { offset: 0, color: 'rgba(47,128,237,.28)' },
-            { offset: 1, color: 'rgba(47,128,237,0)' }
+            { offset: 0, color: 'rgba(77,163,255,.28)' },
+            { offset: 1, color: 'rgba(77,163,255,0)' }
           ]
         }
       }
@@ -215,29 +235,42 @@ onMounted(async () => {
   await disaster.fetchList({ pageSize: 100 })
 })
 
-// 进入页面（含 keep-alive 重新激活）时启动实时流
+// 进入页面（含 keep-alive 重新激活）时启动实时流 + 时钟
 onActivated(() => {
   startFeed()
+  if (!clockTimer) clockTimer = window.setInterval(() => (now.value = new Date()), 1000)
 })
 
 // 离开页面（含 keep-alive 缓存）时停止，避免后台定时器持续推送
 onDeactivated(() => {
   stopFeed()
+  if (clockTimer) {
+    clearInterval(clockTimer)
+    clockTimer = null
+  }
 })
 
 onBeforeUnmount(() => {
   stopFeed()
+  if (clockTimer) {
+    clearInterval(clockTimer)
+    clockTimer = null
+  }
 })
 </script>
 
 <template>
   <div class="dashboard">
-    <!-- 指令条 -->
+    <!-- 指令条：作战室态势条（左标题 / 中实时时钟 / 右连接状态） -->
     <div class="cmdbar">
       <div class="cmd-title"><span class="bar"></span> 灾情态势总览</div>
+      <div class="cmd-clock" aria-label="指挥中心时间">
+        <span class="clock-time">{{ clockTime }}</span>
+        <span class="clock-date">{{ clockDate }}</span>
+      </div>
       <div class="cmd-meta">
         <span class="dot" :class="{ on: connected }"></span>
-        {{ connected ? '实时连接' : '模拟推送' }} · 数据更新于 {{ new Date().toLocaleTimeString() }}
+        {{ connected ? '实时连接' : '模拟推送' }}
       </div>
     </div>
 
@@ -294,11 +327,32 @@ onBeforeUnmount(() => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
   padding: 14px 18px;
-  background: linear-gradient(90deg, #ffffff, #fbfcfd);
+  background: var(--ydr-surface, linear-gradient(90deg, #ffffff, #fbfcfd));
   border: 1px solid var(--ydr-border);
-  border-radius: 12px;
+  border-radius: var(--ydr-radius-control, 12px);
   box-shadow: var(--ydr-shadow);
+}
+/* 作战室实时时钟：等宽大数字 + 副日期，深色底上带微光 */
+.cmd-clock {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+.clock-time {
+  font-family: var(--ydr-mono, 'JetBrains Mono', 'Consolas', monospace);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--ydr-ink);
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 0 14px rgba(255, 77, 61, 0.35);
+}
+.clock-date {
+  font-size: 12px;
+  color: var(--ydr-sub);
+  letter-spacing: 1px;
 }
 .cmd-title {
   display: flex;

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, ref, reactive } from 'vue'
+import { onMounted, ref, reactive, computed } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useResourceStore } from '@/stores/resource'
 import { useDisasterStore } from '@/stores/disaster'
@@ -19,12 +19,21 @@ const dispatchResult = ref<{ records: DispatchRecord[]; conflict: boolean } | nu
 const typeLabel: Record<string, string> = {
   TEAM: '救援队伍', VEHICLE: '车辆', EQUIPMENT: '装备', MATERIAL: '物资', MEDICAL: '医疗', SHELTER: '安置点'
 }
-const statusMeta: Record<string, { label: string; type: string }> = {
-  IDLE: { label: '空闲', type: 'success' },
-  DISPATCHED: { label: '已调度', type: 'primary' },
-  LOCKED: { label: '锁定中', type: 'warning' },
-  MAINTENANCE: { label: '维护', type: 'info' }
+const statusMeta: Record<string, { label: string; type: string; led: string }> = {
+  IDLE: { label: '空闲', type: 'success', led: 'green' },
+  DISPATCHED: { label: '已调度', type: 'primary', led: 'blue' },
+  LOCKED: { label: '锁定中', type: 'warning', led: 'amber' },
+  MAINTENANCE: { label: '维护', type: 'info', led: 'red' }
 }
+
+// 调度台顶部状态计数（Andon 信号灯汇总）
+const statusCount = computed(() => {
+  const c: Record<string, number> = { IDLE: 0, DISPATCHED: 0, LOCKED: 0, MAINTENANCE: 0 }
+  resources.value.forEach((r) => {
+    if (c[r.status] !== undefined) c[r.status]++
+  })
+  return c
+})
 const events = ref<any[]>([])
 
 function load() {
@@ -78,6 +87,17 @@ onMounted(() => {
 
 <template>
   <div class="resource">
+    <!-- Andon 信号灯汇总条：工业调度台风格 -->
+    <div class="andon-bar">
+      <div class="andon-item" v-for="(m, k) in statusMeta" :key="k">
+        <span class="led" :class="m.led"></span>
+        <span class="andon-label">{{ m.label }}</span>
+        <span class="andon-num">{{ statusCount[k] }}</span>
+      </div>
+      <div class="andon-total">
+        资源总数 <b>{{ resources.length }}</b>
+      </div>
+    </div>
     <el-card class="page-card">
       <template #header><b>救援资源查询</b></template>
       <div class="filter">
@@ -97,8 +117,13 @@ onMounted(() => {
         <el-table-column label="类型" width="100">
           <template #default="{ row }">{{ typeLabel[row.type] }}</template>
         </el-table-column>
-        <el-table-column label="状态" width="90">
-          <template #default="{ row }"><el-tag :type="(statusMeta[row.status]?.type as any)" size="small">{{ statusMeta[row.status]?.label }}</el-tag></template>
+        <el-table-column label="状态" width="104">
+          <template #default="{ row }">
+            <span class="status-cell">
+              <span class="led" :class="statusMeta[row.status]?.led"></span>
+              {{ statusMeta[row.status]?.label }}
+            </span>
+          </template>
         </el-table-column>
         <el-table-column prop="city" label="所在州市" width="90" />
         <el-table-column prop="owner" label="所属单位" min-width="140" show-overflow-tooltip />
@@ -142,6 +167,52 @@ onMounted(() => {
 </template>
 
 <style scoped>
+.resource {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+/* Andon 信号灯汇总条：钢灰底 + 琥珀描边 + 等宽数字 */
+.andon-bar {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  padding: 12px 18px;
+  border-radius: var(--ydr-radius-control, 8px);
+  background: var(--ydr-surface, #181b21);
+  border: 1px solid var(--ydr-border);
+}
+.andon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ydr-sub);
+}
+.andon-num {
+  font-family: var(--ydr-mono, 'Consolas', monospace);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ydr-ink);
+  font-variant-numeric: tabular-nums;
+}
+.andon-total {
+  margin-left: auto;
+  font-size: 13px;
+  color: var(--ydr-sub);
+}
+.andon-total b {
+  font-family: var(--ydr-mono, 'Consolas', monospace);
+  font-size: 17px;
+  color: #e8a317;
+  margin-left: 6px;
+}
+.status-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+}
 .filter {
   display: flex;
   gap: 10px;

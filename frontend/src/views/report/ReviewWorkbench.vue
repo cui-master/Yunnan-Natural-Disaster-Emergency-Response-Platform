@@ -6,7 +6,18 @@ import { ElMessage, ElMessageBox } from 'element-plus'
 import type { DisasterEvent, EventStatus, ReviewAction } from '@/types'
 
 const disaster = useDisasterStore()
-const { list, total, loading, statusMeta } = storeToRefs(disaster)
+// 注意：statusMeta 是 store 中的普通对象常量（非 ref），不能用 storeToRefs 解构，
+// 否则解构结果为 undefined，模板里 statusMeta[...] 会抛 TypeError 导致整页渲染崩溃/卡死。
+const { list, total, loading } = storeToRefs(disaster)
+
+// 状态展示映射（本地常量，避免依赖 store 的非响应式属性）
+const statusMeta: Record<EventStatus, { label: string; type: string }> = {
+  PENDING_VERIFY: { label: '待核验', type: 'info' },
+  CONFIRMED: { label: '已确认', type: 'warning' },
+  IN_PROGRESS: { label: '处置中', type: 'primary' },
+  CLOSED: { label: '已结束', type: 'success' },
+  REJECTED: { label: '已驳回', type: 'danger' }
+}
 
 const filterStatus = ref<EventStatus | ''>('')
 const drawer = ref(false)

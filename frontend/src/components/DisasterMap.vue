@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref, watch } from 'vue'
+import { onMounted, onBeforeUnmount, onActivated, ref, watch, nextTick } from 'vue'
 import L from 'leaflet'
 import type { DisasterEvent } from '@/types'
 
@@ -110,6 +110,11 @@ watch(
   () => renderMarkers(),
   { deep: true }
 )
+
+// keep-alive 重新激活时，地图容器尺寸可能失效（被缓存时脱离文档流），需校正
+onActivated(() => {
+  nextTick(() => map?.invalidateSize())
+})
 
 onBeforeUnmount(() => {
   map?.remove()
