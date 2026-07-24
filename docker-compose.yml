@@ -1,0 +1,217 @@
+version: "3.9"
+
+services:
+  db:
+    build: ./db
+    container_name: yn_db
+    environment:
+      POSTGRES_DB: emergency
+      POSTGRES_USER: emergency
+      POSTGRES_PASSWORD: emergency123
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U emergency -d emergency"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  mysql:
+    image: mysql:8.0
+    container_name: yn_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: emergency_auth
+      # 强制容器默认字符集为 utf8mb4（旧版镜像默认 latin1 是中文乱码的根因）
+      LANG: C.UTF-8
+      LC_ALL: C.UTF-8
+      TZ: Asia/Shanghai
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --default-authentication-plugin=mysql_native_password
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./sql/mysql_init.sql:/docker-entrypoint-initdb.d/mysql_init.sql:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  redis:
+    image: redis:7-alpine
+    container_name: yn_redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+
+  minio:
+    image: minio/minio:latest
+    container_name: yn_minio
+    command: server /data --console-address ":9001"
+    environment:
+      MINIO_ROOT_USER: minioadmin
+      MINIO_ROOT_PASSWORD: minioadmin
+    ports:
+      - "9000:9000"
+      - "9001:9001"
+    volumes:
+      - minio_data:/data
+
+  ai-service:
+    build: ./ai-service
+    container_name: yn_ai
+    environment:
+      - PORT=8000
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+
+  # ===== 四个业务系统（共享 PG 业务库 + MySQL 认证库）=====
+  report-service:
+    build:
+      context: ./backend
+      args:
+        MODULE: report-service
+        PORT: 8091
+    container_name: yn_report
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_NAME=emergency
+      - PG_USER=emergency
+      - PG_PASSWORD=emergency123
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_NAME=emergency_auth
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root123
+      - AI_SERVICE_URL=http://ai-service:8000
+    ports:
+      - "8091:8091"
+    depends_on:
+      db:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ai-service:
+        condition: service_started
+
+  command-service:
+    build:
+      context: ./backend
+      args:
+        MODULE: command-service
+        PORT: 8092
+    container_name: yn_command
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_NAME=emergency
+      - PG_USER=emergency
+      - PG_PASSWORD=emergency123
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_NAME=emergency_auth
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root123
+      - AI_SERVICE_URL=http://ai-service:8000
+    ports:
+      - "8092:8092"
+    depends_on:
+      db:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ai-service:
+        condition: service_started
+
+  resource-service:
+    build:
+      context: ./backend
+      args:
+        MODULE: resource-service
+        PORT: 8093
+    container_name: yn_resource
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_NAME=emergency
+      - PG_USER=emergency
+      - PG_PASSWORD=emergency123
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_NAME=emergency_auth
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root123
+      - AI_SERVICE_URL=http://ai-service:8000
+    ports:
+      - "8093:8093"
+    depends_on:
+      db:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ai-service:
+        condition: service_started
+
+  admin-service:
+    build:
+      context: ./backend
+      args:
+        MODULE: admin-service
+        PORT: 8094
+    container_name: yn_admin
+    environment:
+      - PG_HOST=db
+      - PG_PORT=5432
+      - PG_NAME=emergency
+      - PG_USER=emergency
+      - PG_PASSWORD=emergency123
+      - MYSQL_HOST=mysql
+      - MYSQL_PORT=3306
+      - MYSQL_NAME=emergency_auth
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root123
+      - AI_SERVICE_URL=http://ai-service:8000
+    ports:
+      - "8094:8094"
+    depends_on:
+      db:
+        condition: service_healthy
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+      ai-service:
+        condition: service_started
+
+  frontend:
+    build: ./frontend
+    container_name: yn_frontend
+    ports:
+      - "8088:80"
+    depends_on:
+      - admin-service
+      - report-service
+      - command-service
+      - resource-service
+
+volumes:
+  db_data:
+  mysql_data:
+  minio_data:

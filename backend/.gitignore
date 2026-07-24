@@ -1,0 +1,21 @@
+# 编译产物
+target/
+
+# Maven wrapper（本项目用 build.sh 直接调本地 Maven，wrapper 缺 jar 易坏）
+.mvn/
+mvnw
+mvnw.cmd
+
+# 日志
+*.log
+
+# 临时/遗留垃圾文件
+1234.txt
+*.tmp
+
+# IDE
+.idea/
+*.iml
+
+# 环境变量
+*.env

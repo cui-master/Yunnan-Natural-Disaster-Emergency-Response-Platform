@@ -1,0 +1,53 @@
+:root {
+  --ydr-primary: #c0392b;
+  --ydr-bg: #f5f7fa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;
+  background: var(--ydr-bg);
+  color: #1f2d3d;
+}
+
+/* Leaflet 与 Element Plus 浮层 z-index 冲突修复 */
+.leaflet-container {
+  z-index: 1;
+  font-size: 12px;
+}
+.leaflet-pane {
+  z-index: 1;
+}
+
+/* 让地图标记 tooltip 显示在上层 */
+.leaflet-tooltip {
+  z-index: 500 !important;
+}
+
+.page-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.text-muted {
+  color: #909399;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

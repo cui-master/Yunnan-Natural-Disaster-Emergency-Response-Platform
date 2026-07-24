@@ -1,0 +1,31 @@
+server:
+  port: 8094
+  servlet:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: admin-service
+  datasource:
+    pg:
+      url: jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_NAME:emergency}?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+      username: ${PG_USER:emergency}
+      password: ${PG_PASSWORD:emergency123}
+      driver-class-name: org.postgresql.Driver
+    mysql:
+      url: jdbc:mysql://${MYSQL_HOST:localhost}:${MYSQL_PORT:3306}/${MYSQL_NAME:emergency_auth}?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true&useSSL=false&sslMode=DISABLED
+      username: ${MYSQL_USER:root}
+      password: ${MYSQL_PASSWORD:root123}
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      # 强制每个连接使用 utf8mb4 字符集，避免客户端 latin1 链路导致中文二次编码
+      connection-init-sql: "SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci"
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+ai:
+  service:
+    url: ${AI_SERVICE_URL:http://localhost:8001}

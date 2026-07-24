@@ -1,0 +1,59 @@
+# Java / Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+*.class
+*.jar
+!**/src/**/*.jar
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# Python
+ai-service/.venv/
+ai-service/__pycache__/
+ai-service/*.pyc
+ai-service/venv/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Env
+*.env
+.env.local
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Uploads
+backend/uploads/
+
+# Frontend build artifacts
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts
+
+# Python (大写服务 / data-pipeline / 通用)
+AI_service/.venv/
+AI_service/__pycache__/
+AI_service/*.pyc
+AI_service/venv/
+data-pipeline/.venv/
+data-pipeline/.venv_lib/
+data-pipeline/__pycache__/
+data-pipeline/*.pyc
+data-pipeline/.pytest_cache/
+**/__pycache__/
+**/*.pyc
+**/.venv/
+**/.pytest_cache/
+
+# Next.js (frontend/mobile)
+frontend/mobile/node_modules/
+frontend/mobile/.next/
+frontend/mobile/out/

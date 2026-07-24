@@ -1,0 +1,395 @@
+/* ============================================================
+ *  system-themes.css —— 四个系统差异化视觉签名
+ *  目标：让"切换系统"这件事一眼可辨（主色 + 布局 + 装饰 + 动效）
+ *  加载顺序：style.css -> system-themes.css（覆盖其主题段）
+ * ============================================================ */
+
+/* ============== 1. 信息员（横排·薄荷青绿·阳光现场） ============== */
+.theme-reporter {
+  --ydr-primary: #0ea5a0;
+  --ydr-primary-soft: #e6f7f6;
+  --ydr-primary-dark: #0b7d79;
+  --ydr-bg: linear-gradient(135deg, #f4fbf9 0%, #e6f7f6 60%, #f0faf8 100%);
+  --ydr-surface: rgba(255, 255, 255, 0.86);
+  --ydr-glass: rgba(255, 255, 255, 0.72);
+
+  /* 横排浅色顶栏：薄荷白 */
+  --role-sidebar-bg: linear-gradient(135deg, #ffffff 0%, #f0faf8 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #0ea5a0, #34d399);
+  --role-sidebar-text: #1f3a38;
+  --role-sidebar-muted: rgba(31, 58, 56, 0.45);
+  --role-sidebar-hover: rgba(14, 165, 160, 0.08);
+
+  --el-color-primary: #0ea5a0;
+  --el-color-primary-light-3: #4cc1bc;
+  --el-color-primary-light-5: #7fd2ce;
+  --el-color-primary-light-7: #b3e6e3;
+  --el-color-primary-light-8: #cdeeeb;
+  --el-color-primary-light-9: #e6f7f6;
+  --el-color-primary-dark-2: #0b7d79;
+
+  /* 装饰：光斑 */
+  --deco-blob-1: radial-gradient(circle at 12% 18%, rgba(52, 211, 153, 0.18) 0, transparent 38%);
+  --deco-blob-2: radial-gradient(circle at 88% 80%, rgba(14, 165, 160, 0.14) 0, transparent 42%);
+  --deco-pattern: none;
+  --deco-accent: #34d399;
+  --signature-label: '一线 · 上报台';
+  --signature-emoji: '🌿';
+}
+
+/* ============== 2. 应急指挥（横排·深色作战·应急红） ============== */
+.theme-commander {
+  --ydr-primary: #e03e2f;
+  --ydr-primary-soft: #fdece9;
+  --ydr-primary-dark: #b33226;
+  --ydr-bg:
+    radial-gradient(ellipse at top, rgba(224, 62, 47, 0.06) 0, transparent 60%),
+    linear-gradient(180deg, #0e1b2e 0%, #16263a 100%);
+  --ydr-surface: rgba(20, 33, 53, 0.78);
+  --ydr-glass: rgba(15, 26, 43, 0.62);
+  --ydr-ink: #f1f5fb;
+  --ydr-text: #d3dcec;
+  --ydr-sub: #8a9bb3;
+  --ydr-border: rgba(180, 200, 230, 0.12);
+  --ydr-border-strong: rgba(180, 200, 230, 0.22);
+
+  /* 深色作战顶栏 */
+  --role-sidebar-bg: linear-gradient(135deg, #0a1525 0%, #16263a 60%, #1f2f48 100%);
+  --role-sidebar-grad: linear-gradient(90deg, #e03e2f, #f2994a);
+  --role-sidebar-text: #e6ecf5;
+  --role-sidebar-muted: rgba(230, 236, 245, 0.42);
+  --role-sidebar-hover: rgba(255, 255, 255, 0.08);
+
+  --el-color-primary: #e03e2f;
+  --el-color-primary-light-3: #ec6f64;
+  --el-color-primary-light-5: #f29a92;
+  --el-color-primary-light-7: #f8c4be;
+  --el-color-primary-light-8: #fbd9d4;
+  --el-color-primary-light-9: #fdeeeb;
+  --el-color-primary-dark-2: #b33226;
+  --el-text-color-primary: #f1f5fb;
+  --el-text-color-regular: #d3dcec;
+  --el-text-color-secondary: #8a9bb3;
+  --el-border-color: rgba(180, 200, 230, 0.12);
+  --el-bg-color: transparent;
+
+  /* 装饰：扫描线 + 警示色边 */
+  --deco-blob-1: radial-gradient(circle at 80% 0%, rgba(224, 62, 47, 0.18) 0, transparent 35%);
+  --deco-blob-2: radial-gradient(circle at 0% 100%, rgba(242, 153, 74, 0.10) 0, transparent 40%);
+  --deco-pattern:
+    repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      transparent 38px,
+      rgba(224, 62, 47, 0.025) 38px,
+      rgba(224, 62, 47, 0.025) 39px
+    );
+  --deco-accent: #f2994a;
+  --signature-label: '指挥 · 中枢';
+  --signature-emoji: '🎯';
+}
+
+/* ============== 3. 资源管理员（竖排·琥珀暖·仓储能量） ============== */
+.theme-resmgr {
+  --ydr-primary: #e08a1e;
+  --ydr-primary-soft: #fdf2e2;
+  --ydr-primary-dark: #b06d12;
+  --ydr-bg: linear-gradient(180deg, #fdf8ee 0%, #f6ead2 100%);
+  --ydr-surface: rgba(255, 252, 244, 0.92);
+  --ydr-glass: rgba(255, 250, 240, 0.78);
+
+  /* 竖排琥珀深色侧栏 */
+  --role-sidebar-bg: linear-gradient(180deg, #1f1408 0%, #2e2412 50%, #3a2c14 100%);
+  --role-sidebar-grad: linear-gradient(180deg, #e08a1e, #f2b705);
+  --role-sidebar-text: #f7e7c8;
+  --role-sidebar-muted: rgba(247, 231, 200, 0.5);
+  --role-sidebar-hover: rgba(224, 138, 30, 0.16);
+
+  --el-color-primary: #e08a1e;
+  --el-color-primary-light-3: #eaa854;
+  --el-color-primary-light-5: #f1c184;
+  --el-color-primary-light-7: #f8dcb3;
+  --el-color-primary-light-8: #fbe8cf;
+  --el-color-primary-light-9: #fdf2e2;
+  --el-color-primary-dark-2: #b06d12;
+
+  /* 装饰：仓栏网格 */
+  --deco-blob-1: radial-gradient(circle at 100% 0%, rgba(224, 138, 30, 0.16) 0, transparent 40%);
+  --deco-blob-2: radial-gradient(circle at 0% 90%, rgba(242, 183, 5, 0.18) 0, transparent 45%);
+  --deco-pattern:
+    linear-gradient(rgba(176, 109, 18, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(176, 109, 18, 0.04) 1px, transparent 1px);
+  --deco-pattern-size: 28px 28px;
+  --deco-accent: #f2b705;
+  --signature-label: '资源 · 调度台';
+  --signature-emoji: '📦';
+}
+
+/* ============== 4. 系统管理员（竖排·靛紫科技·管理控制台） ============== */
+.theme-admin {
+  --ydr-primary: #4f46e5;
+  --ydr-primary-soft: #eceafe;
+  --ydr-primary-dark: #3f37b8;
+  --ydr-bg:
+    radial-gradient(circle at 100% 0%, rgba(124, 111, 240, 0.08) 0, transparent 50%),
+    linear-gradient(180deg, #f6f5fd 0%, #eceafe 100%);
+  --ydr-surface: rgba(255, 255, 255, 0.92);
+  --ydr-glass: rgba(255, 255, 255, 0.78);
+
+  /* 竖排靛紫深色侧栏 */
+  --role-sidebar-bg: linear-gradient(180deg, #0f1130 0%, #1d1f47 50%, #2a2c5e 100%);
+  --role-sidebar-grad: linear-gradient(180deg, #4f46e5, #7c6ff0);
+  --role-sidebar-text: #dcdaf5;
+  --role-sidebar-muted: rgba(220, 218, 245, 0.5);
+  --role-sidebar-hover: rgba(124, 111, 240, 0.18);
+
+  --el-color-primary: #4f46e5;
+  --el-color-primary-light-3: #7d76ec;
+  --el-color-primary-light-5: #9a94f1;
+  --el-color-primary-light-7: #c2bef5;
+  --el-color-primary-light-8: #d6d3f8;
+  --el-color-primary-light-9: #eceafe;
+  --el-color-primary-dark-2: #3f37b8;
+
+  /* 装饰：电路点阵 */
+  --deco-blob-1: radial-gradient(circle at 100% 0%, rgba(79, 70, 229, 0.14) 0, transparent 40%);
+  --deco-blob-2: radial-gradient(circle at 0% 100%, rgba(124, 111, 240, 0.10) 0, transparent 45%);
+  --deco-pattern:
+    radial-gradient(circle at 1px 1px, rgba(79, 70, 229, 0.10) 1px, transparent 0);
+  --deco-pattern-size: 22px 22px;
+  --deco-accent: #7c6ff0;
+  --signature-label: '系统 · 控制台';
+  --signature-emoji: '⚙️';
+}
+
+/* ===== 全局：基础排版与 Element Plus 桥接 ===== */
+* {
+  box-sizing: border-box;
+}
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font-body);
+  background: var(--ydr-bg);
+  background-attachment: fixed;
+  color: var(--ydr-text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-variant-numeric: tabular-nums;
+  transition:
+    background 0.55s var(--ease-out-expo),
+    color 0.45s var(--ease-out-quart);
+}
+
+/* ===== 角色专属装饰层（在 RoleLayout 子树前渲染） ===== */
+.role-shell::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: var(--deco-blob-1), var(--deco-blob-2);
+  z-index: 0;
+  transition: background 0.6s var(--ease-out-expo);
+}
+.role-shell::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: var(--deco-pattern);
+  background-size: var(--deco-pattern-size, auto);
+  opacity: 0.85;
+  z-index: 0;
+  transition: background-image 0.6s var(--ease-out-expo);
+}
+
+/* 保证内容浮在装饰层之上 */
+.role-shell > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== 各角色专用：版式与卡片差异 ===== */
+
+/* 信息员：白底卡 + 薄荷柔光边框 */
+.theme-reporter .page-card {
+  background: var(--ydr-surface);
+  border: 1px solid rgba(14, 165, 160, 0.16);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(14, 165, 160, 0.08);
+  backdrop-filter: blur(6px);
+}
+.theme-reporter .section-title::before {
+  background: linear-gradient(180deg, #0ea5a0, #34d399);
+}
+
+/* 指挥：玻璃拟态 + 红色警示条 */
+.theme-commander .page-card {
+  background: var(--ydr-surface);
+  border: 1px solid rgba(224, 62, 47, 0.22);
+  border-radius: 8px;
+  box-shadow:
+    0 0 0 1px rgba(224, 62, 47, 0.08),
+    0 12px 28px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(8px);
+  color: var(--ydr-text);
+}
+.theme-commander .section-title::before {
+  background: linear-gradient(180deg, #e03e2f, #f2994a);
+  box-shadow: 0 0 8px rgba(224, 62, 47, 0.5);
+}
+.theme-commander .text-muted {
+  color: var(--ydr-sub);
+}
+
+/* 资源：暖琥珀卡 + 仓储色边 */
+.theme-resmgr .page-card {
+  background: var(--ydr-surface);
+  border: 1px solid rgba(176, 109, 18, 0.20);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(176, 109, 18, 0.10);
+}
+.theme-resmgr .section-title::before {
+  background: linear-gradient(180deg, #e08a1e, #f2b705);
+}
+
+/* 管理：靛紫卡 + 玻璃高光 */
+.theme-admin .page-card {
+  background: var(--ydr-surface);
+  border: 1px solid rgba(79, 70, 229, 0.18);
+  border-radius: 12px;
+  box-shadow:
+    0 4px 18px rgba(79, 70, 229, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(6px);
+}
+.theme-admin .section-title::before {
+  background: linear-gradient(180deg, #4f46e5, #7c6ff0);
+}
+
+/* ===== 角色签名徽章（导航区显示当前角色） ===== */
+.role-signature {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  background: var(--ydr-primary-soft);
+  color: var(--ydr-primary-dark);
+  border: 1px solid color-mix(in oklab, var(--ydr-primary) 30%, transparent);
+  transition: all 0.4s var(--ease-out-quart);
+}
+.theme-commander .role-signature {
+  background: rgba(224, 62, 47, 0.18);
+  color: #ffd1c9;
+  border-color: rgba(224, 62, 47, 0.4);
+}
+
+/* ===== 切换动画：View Transitions API ===== */
+@supports (view-transition-name: a) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.35s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  ::view-transition-old(root) {
+    animation-name: vt-fade-out;
+  }
+  ::view-transition-new(root) {
+    animation-name: vt-fade-in;
+  }
+  ::view-transition-group(role-shell) {
+    animation-duration: 0.42s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+}
+@keyframes vt-fade-out {
+  to {
+    opacity: 0;
+    transform: translateY(-6px) scale(0.985);
+  }
+}
+@keyframes vt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.998);
+  }
+}
+
+/* ===== 路由过渡（Vue transition 回退） ===== */
+.fade-slide-enter-active,
+.fade-slide-leave-active {
+  transition:
+    opacity 0.28s var(--ease-out-quart),
+    transform 0.32s var(--ease-out-expo),
+    filter 0.28s var(--ease-out-quart);
+}
+.fade-slide-enter-from {
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(2px);
+}
+.fade-slide-leave-to {
+  opacity: 0;
+  transform: translateY(-6px);
+  filter: blur(2px);
+}
+
+/* ===== Element Plus 主题色统一继承 ===== */
+.el-button--primary {
+  --el-button-bg-color: var(--ydr-primary);
+  --el-button-border-color: var(--ydr-primary);
+  --el-button-hover-bg-color: var(--ydr-primary-dark);
+  --el-button-hover-border-color: var(--ydr-primary-dark);
+  --el-button-active-bg-color: var(--ydr-primary-dark);
+}
+.el-tabs__item.is-active,
+.el-menu-item.is-active {
+  color: var(--ydr-primary) !important;
+}
+.el-tabs__active-bar {
+  background-color: var(--ydr-primary) !important;
+}
+
+/* ===== 滚动条 ===== */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: color-mix(in oklab, var(--ydr-primary) 25%, #cdd4df);
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in oklab, var(--ydr-primary) 45%, #b3bccb);
+}
+
+/* ===== 无障碍：尊重 prefers-reduced-motion ===== */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root),
+  ::view-transition-group(role-shell) {
+    animation-duration: 0.01ms !important;
+  }
+  .fade-slide-enter-active,
+  .fade-slide-leave-active {
+    transition-duration: 0.01ms !important;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+  }
+}
+
+/* ===== 地图弹窗主题化 ===== */
+.ydr-popup-title {
+  color: var(--ydr-primary) !important;
+}
+.theme-commander .ydr-popup-title {
+  color: #ffd1c9 !important;
+}
