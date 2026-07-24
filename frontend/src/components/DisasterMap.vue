@@ -12,6 +12,7 @@ const props = defineProps<{
 const mapEl = ref<HTMLDivElement>()
 let map: L.Map | null = null
 let layer: L.LayerGroup | null = null
+let legendEl: HTMLDivElement | null = null
 
 const levelColor: Record<string, string> = {
   I: '#7b241c',
@@ -19,15 +20,26 @@ const levelColor: Record<string, string> = {
   III: '#e67e22',
   IV: '#f1c40f'
 }
+const levelLabel: Record<string, string> = {
+  I: 'Ⅰ级 特别重大',
+  II: 'Ⅱ级 重大',
+  III: 'Ⅲ级 较大',
+  IV: 'Ⅳ级 一般'
+}
+const typeIcon: Record<string, string> = {
+  EARTHQUAKE: '🌐', FLOOD: '🌊', LANDSLIDE: '⛰️', DEBRIS_FLOW: '🪨',
+  DROUGHT: '☀️', FOREST_FIRE: '🔥', HAIL: '🌨️', TYPHOON: '🌀'
+}
 const typeLabel: Record<string, string> = {
-  EARTHQUAKE: '地震',
-  FLOOD: '洪涝',
-  LANDSLIDE: '滑坡',
-  DEBRIS_FLOW: '泥石流',
-  DROUGHT: '干旱',
-  FOREST_FIRE: '森林火灾',
-  HAIL: '冰雹',
-  TYPHOON: '台风'
+  EARTHQUAKE: '地震', FLOOD: '洪涝', LANDSLIDE: '滑坡', DEBRIS_FLOW: '泥石流',
+  DROUGHT: '干旱', FOREST_FIRE: '森林火灾', HAIL: '冰雹', TYPHOON: '台风'
+}
+
+function getCoords(e: DisasterEvent): [number, number] | null {
+  const lat = e.geo?.lat ?? (e as any).lat
+  const lng = e.geo?.lng ?? (e as any).lng
+  if (typeof lat === 'number' && typeof lng === 'number' && lat && lng) return [lat, lng]
+  return null
 }
 
 function renderMarkers() {
@@ -35,25 +47,49 @@ function renderMarkers() {
   if (layer) layer.remove()
   layer = L.layerGroup().addTo(map)
   props.events.forEach((e) => {
+    const coords = getCoords(e)
+    if (!coords) return
     const color = levelColor[e.level] || '#999'
-    const icon = L.divIcon({
-      className: 'ydr-marker',
-      html: `<div style="width:18px;height:18px;border-radius:50%;background:${color};border:2px solid #fff;box-shadow:0 0 0 2px ${color}55"></div>`,
-      iconSize: [18, 18],
-      iconAnchor: [9, 9]
+    const icon = typeIcon[e.type] || '📍'
+    const pulse = e.level === 'I' || e.level === 'II'
+    const html = `<div class="ydr-pin lv-${e.level} ${pulse ? 'pulse' : ''}"><span>${icon}</span></div>`
+    const marker = L.marker(coords, {
+      icon: L.divIcon({ className: 'ydr-marker', html, iconSize: [30, 30], iconAnchor: [15, 28] })
     })
-    const marker = L.marker([e.geo.lat, e.geo.lng], { icon })
     marker.bindTooltip(
-      `<b>${e.title}</b><br/>等级：${e.level} 级<br/>状态：${e.status}<br/>影响人口：${e.affectedPopulation || 0}`,
-      { direction: 'top' }
+      `<b>${e.title}</b><br/>等级：${e.level || '—'} 级<br/>状态：${e.status}<br/>影响人口：${e.affectedPopulation || 0}`,
+      { direction: 'top', offset: [0, -26] }
     )
     marker.bindPopup(
-      `<div style="min-width:200px"><b>${e.title}</b><br/>
-       类型：${typeLabel[e.type]}<br/>等级：${e.level}<br/>
-       位置：${e.location}<br/>描述：${e.description}</div>`
+      `<div class="ydr-popup-title">${e.title}</div>
+       <div class="ydr-popup-meta">
+         <span>类型：${typeLabel[e.type] || e.type}</span>
+         <span>等级：${e.level || '—'}</span>
+       </div>
+       <div class="ydr-popup-meta">
+         <span>位置：${e.location || '—'}</span>
+       </div>
+       <div style="margin-top:4px;color:#5a6675">${e.description || ''}</div>`
     )
     layer!.addLayer(marker)
   })
+}
+
+function addLegend() {
+  if (!map || legendEl) return
+  legendEl = document.createElement('div')
+  legendEl.className = 'ydr-legend'
+  legendEl.innerHTML = `
+    <div style="font-weight:600;margin-bottom:4px">灾情等级</div>
+    ${Object.keys(levelLabel)
+      .map(
+        (k) =>
+          `<div class="lg-row"><span class="lg-dot" style="background:${levelColor[k]}"></span>${levelLabel[k]}</div>`
+      )
+      .join('')}`
+  const control = new L.Control({ position: 'bottomright' })
+  control.onAdd = () => legendEl as HTMLElement
+  control.addTo(map)
 }
 
 onMounted(() => {
@@ -66,6 +102,7 @@ onMounted(() => {
     maxZoom: 18
   }).addTo(map)
   renderMarkers()
+  addLegend()
 })
 
 watch(
@@ -88,7 +125,7 @@ onBeforeUnmount(() => {
 .map {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
 }
 </style>

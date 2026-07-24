@@ -1,7 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import Login from '../views/Login.vue'
-import BasicLayout from '../layout/BasicLayout.vue'
+import RoleLayout from '../layout/RoleLayout.vue'
 import { useAuthStore } from '../stores/auth'
 import type { RoleCode } from '../types'
 
@@ -26,7 +26,7 @@ const routes: RouteRecordRaw[] = [
   { path: '/login', component: Login, meta: { title: '登录' } },
   {
     path: '/',
-    component: BasicLayout,
+    component: RoleLayout,
     redirect: '/dashboard',
     meta: { requiresAuth: true },
     children: [
@@ -36,41 +36,49 @@ const routes: RouteRecordRaw[] = [
         meta: { title: '灾情态势大屏', icon: 'DataLine', roles: [], requiresAuth: true }
       },
       {
+        // 普通信息员：上报灾情（唯一上报入口）
         path: 'report',
         component: () => import('../views/report/DisasterReport.vue'),
-        meta: { title: '灾情上报', icon: 'Upload', roles: ['ROLE_REPORTER', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+        meta: { title: '灾情上报', icon: 'Upload', roles: ['ROLE_REPORTER'], requiresAuth: true }
       },
       {
+        // 应急指挥人员：审核事件
         path: 'review',
         component: () => import('../views/report/ReviewWorkbench.vue'),
-        meta: { title: '信息审核', icon: 'Stamp', roles: ['ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+        meta: { title: '信息审核', icon: 'Stamp', roles: ['ROLE_COMMANDER'], requiresAuth: true }
       },
       {
+        // 应急指挥人员：生成处置方案（API + Dify）
         path: 'plan',
         component: () => import('../views/plan/PlanWorkbench.vue'),
-        meta: { title: '应急方案', icon: 'MagicStick', roles: ['ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+        meta: { title: '应急方案', icon: 'MagicStick', roles: ['ROLE_COMMANDER'], requiresAuth: true }
       },
       {
+        // 资源管理员：维护人员/车辆/物资/避难场所
         path: 'resources',
         component: () => import('../views/resource/ResourceQuery.vue'),
-        meta: { title: '资源查询', icon: 'Box', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+        meta: { title: '资源管理', icon: 'Box', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER'], requiresAuth: true }
       },
       {
+        // 资源管理员：调度看板
         path: 'dispatch',
         component: () => import('../views/resource/DispatchBoard.vue'),
-        meta: { title: '调度看板', icon: 'Promotion', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER', 'ROLE_ADMIN'], requiresAuth: true }
+        meta: { title: '调度看板', icon: 'Promotion', roles: ['ROLE_RESMGR', 'ROLE_COMMANDER'], requiresAuth: true }
       },
       {
+        // 系统管理员：知识库（Dify 桥接）
         path: 'knowledge',
         component: () => import('../views/knowledge/KnowledgeManage.vue'),
         meta: { title: '知识库', icon: 'Reading', roles: ['ROLE_ADMIN'], requiresAuth: true }
       },
       {
+        // 系统管理员：审计日志
         path: 'audit',
         component: () => import('../views/audit/AuditLog.vue'),
         meta: { title: '审计日志', icon: 'Document', roles: ['ROLE_ADMIN'], requiresAuth: true }
       },
       {
+        // 系统管理员：用户/模型/数据源
         path: 'system',
         component: () => import('../views/system/SystemManage.vue'),
         meta: { title: '系统管理', icon: 'Setting', roles: ['ROLE_ADMIN'], requiresAuth: true }

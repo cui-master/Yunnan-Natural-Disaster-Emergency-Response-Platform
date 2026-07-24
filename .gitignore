@@ -32,3 +32,8 @@ Thumbs.db
 
 # Uploads
 backend/uploads/
+
+# Frontend build artifacts
+*.tsbuildinfo
+frontend/vite.config.js
+frontend/vite.config.d.ts

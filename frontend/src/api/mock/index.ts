@@ -89,14 +89,17 @@ const RESOURCES: any[] = [
 ]
 
 const DISPATCHES: any[] = []
-const KNOWLEDGE: any[] = [
-  mkDoc('云南省地震应急预案（2024版）', 'EMERGENCY_PLAN', ['地震', '预案'], ['EARTHQUAKE'], 18, '省应急厅'),
-  mkDoc('滑坡泥石流灾害处置技术规范', 'DISASTER_SPEC', ['滑坡', '泥石流'], ['LANDSLIDE', 'DEBRIS_FLOW'], 12, '自然资源厅'),
-  mkDoc('森林防火条例实施细则', 'LAW', ['森林', '防火'], ['FOREST_FIRE'], 9, '省林草局'),
-  mkDoc('2022年泸定地震处置案例', 'CASE', ['地震', '案例'], ['EARTHQUAKE'], 7, '应急研究院'),
-  mkDoc('城市内涝应急响应指南', 'GUIDE', ['内涝', '城市'], ['FLOOD'], 6, '住建厅'),
-  mkDoc('干旱灾害救助操作规程', 'DISASTER_SPEC', ['干旱'], ['DROUGHT'], 5, '省应急厅')
-]
+const KIT_DOCS: Record<string, any[]> = {
+  优化调度: [
+    mkKitDoc('云南省救援物资调度预案', 24, 8600),
+    mkKitDoc('多灾种应急资源优化配置模型', 16, 5200)
+  ],
+  风险评估: [
+    mkKitDoc('云南省自然灾害风险区划报告', 31, 12400),
+    mkKitDoc('滑坡泥石流风险评估技术规范', 14, 4700),
+    mkKitDoc('2022年泸定地震案例复盘', 9, 3100)
+  ]
+}
 const AUDITS: any[] = []
 USERS.forEach((u, i) => {
   AUDITS.push({
@@ -140,11 +143,14 @@ function mkDispatch(eventId: number, resourceId: number, status: string, conflic
     status, dispatchedBy: '王指挥', dispatchedAt: now(), eta: '2h', conflict, conflictReason: reason
   }
 }
-function mkDoc(title: string, category: string, tags: string[], types: string[], chunks: number, uploader: string) {
+function mkKitDoc(name: string, chunks: number, words: number) {
   return {
-    id: uid(), title, category, tags, disasterTypes: types, chunkCount: chunks,
-    source: title, uploader, uploadedAt: now(), updatedAt: now(),
-    summary: `${title}（共${chunks}个分块，已进入向量库）`
+    id: 'doc-' + uid(),
+    name,
+    status: 'COMPLETED',
+    chunkCount: chunks,
+    wordCount: words,
+    uploadedAt: now()
   }
 }
 
@@ -273,24 +279,23 @@ route('post', '/api/plans/:id/approve', (c) => {
   return ok(p)
 })
 
-// ----- 知识库（前端页，后端暂未提供接口） -----
-route('get', '/api/knowledge', (c) => {
-  let list = [...KNOWLEDGE]
-  const { category, keyword } = c.query
-  if (category) list = list.filter((k) => k.category === category)
-  if (keyword) list = list.filter((k) => k.title.includes(keyword))
+// ----- 知识库（Dify 模型：按 kit 分库，前端 → Spring Boot → FastAPI → Dify） -----
+route('post', '/api/knowledge/upload', (c) => {
+  const kbName = (c.query.kbName as string) || '优化调度'
+  const doc = mkKitDoc('新上传文档-' + new Date().toISOString().slice(11, 19), 6, 1800)
+  ;(KIT_DOCS[kbName] = KIT_DOCS[kbName] || []).unshift(doc)
+  return ok({ msg: `文件已提交至【${kbName}】知识库`, results: [{ name: doc.name, status: 'PARSING' }] })
+})
+route('get', '/api/knowledge/documents', (c) => {
+  const kbName = (c.query.kbName as string) || '优化调度'
+  const list = KIT_DOCS[kbName] || []
   return ok({ list, total: list.length })
 })
-route('post', '/api/knowledge', (c) => {
-  const b = c.body
-  const doc = mkDoc(b.title, b.category, b.tags || [], b.disasterTypes || [], 8, '当前用户')
-  doc.summary = b.summary || doc.summary
-  KNOWLEDGE.unshift(doc)
-  return ok(doc)
-})
-route('delete', '/api/knowledge/:id', (c) => {
-  const i = KNOWLEDGE.findIndex((k) => k.id === Number(c.params.id))
-  if (i >= 0) KNOWLEDGE.splice(i, 1)
+route('delete', '/api/knowledge/documents/:id', (c) => {
+  const kbName = (c.query.kbName as string) || '优化调度'
+  const arr = KIT_DOCS[kbName] || []
+  const i = arr.findIndex((d) => d.id === c.params.id)
+  if (i >= 0) arr.splice(i, 1)
   return ok(true)
 })
 

@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --emergency-blue: #1d4ed8;
+  --emergency-red: #dc2626;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC",
+    "Microsoft YaHei", sans-serif;
+  background-color: #f3f4f6;
+  color: #1f2937;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 底部 Tab 安全区留白（含 iPhone 底部安全区） */
+.pb-safe {
+  padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
+}
+
+/* 隐藏 number input 的上下箭头，移动端更友好 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* 让视频/图片在缩略图里保持比例且不溢出 */
+.media-thumb {
+  object-fit: cover;
+}
