@@ -1,0 +1,835 @@
+{
+  "nodes": [
+    {
+      "id": 0,
+      "labels": [
+        "DisasterType"
+      ],
+      "properties": {
+        "name": "地震",
+        "typeName": "地震"
+      }
+    },
+    {
+      "id": 1,
+      "labels": [
+        "RiskLevel"
+      ],
+      "properties": {
+        "level": 1,
+        "name": "低"
+      }
+    },
+    {
+      "id": 2,
+      "labels": [
+        "AffectedCount"
+      ],
+      "properties": {
+        "name": "受灾0人",
+        "count": 0,
+        "incidentId": 1
+      }
+    },
+    {
+      "id": 3,
+      "labels": [
+        "Incident"
+      ],
+      "properties": {
+        "incidentNo": "INC-1785037365067",
+        "riskLevel": "低",
+        "locationName": "昆明呈贡呈贡雨花街道受灾点",
+        "disasterType": "地震",
+        "affectedPeople": 57,
+        "name": "昆明呈贡雨花街道地震",
+        "location": "昆明呈贡呈贡雨花街道受灾点",
+        "state": 1,
+        "riskLevelValue": 1,
+        "incidentId": 4,
+        "title": "昆明呈贡雨花街道地震",
+        "status": "已确认"
+      }
+    },
+    {
+      "id": 4,
+      "labels": [
+        "PlaceName"
+      ],
+      "properties": {
+        "name": "昆明呈贡呈贡雨花街道受灾点",
+        "placeName": "昆明呈贡呈贡雨花街道受灾点"
+      }
+    },
+    {
+      "id": 5,
+      "labels": [
+        "AffectedCount"
+      ],
+      "properties": {
+        "name": "受灾57人",
+        "count": 57,
+        "incidentId": 4
+      }
+    },
+    {
+      "id": 6,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 1,
+        "resourceNo": "WH-001",
+        "totalQty": 50000,
+        "locationId": 2,
+        "name": "云南省应急物资中心库",
+        "availableQty": 45000,
+        "category": "warehouse"
+      }
+    },
+    {
+      "id": 7,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 2,
+        "resourceNo": "WH-002",
+        "totalQty": 15000,
+        "locationId": 6,
+        "name": "昭通市应急物资储备库",
+        "availableQty": 12000,
+        "category": "warehouse"
+      }
+    },
+    {
+      "id": 8,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 3,
+        "resourceNo": "WH-003",
+        "totalQty": 12000,
+        "locationId": 14,
+        "name": "大理州应急物资储备库",
+        "availableQty": 10500,
+        "category": "warehouse"
+      }
+    },
+    {
+      "id": 9,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 4,
+        "resourceNo": "TEAM-001",
+        "totalQty": 500,
+        "locationId": 2,
+        "name": "云南省消防救援总队",
+        "availableQty": 480,
+        "category": "team"
+      }
+    },
+    {
+      "id": 10,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 5,
+        "resourceNo": "TEAM-002",
+        "totalQty": 200,
+        "locationId": 3,
+        "name": "云南省矿山应急救援队",
+        "availableQty": 180,
+        "category": "team"
+      }
+    },
+    {
+      "id": 11,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 6,
+        "resourceNo": "TEAM-003",
+        "totalQty": 150,
+        "locationId": 14,
+        "name": "云南省地质灾害应急救援队",
+        "availableQty": 240,
+        "category": "team"
+      }
+    },
+    {
+      "id": 12,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 7,
+        "resourceNo": "TEAM-004",
+        "totalQty": 100,
+        "locationId": 2,
+        "name": "云南省医疗应急救援队",
+        "availableQty": 145,
+        "category": "team"
+      }
+    },
+    {
+      "id": 13,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 8,
+        "resourceNo": "SH-001",
+        "totalQty": 10000,
+        "locationId": 2,
+        "name": "昆明市体育中心避难所",
+        "availableQty": 10000,
+        "category": "shelter"
+      }
+    },
+    {
+      "id": 14,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 9,
+        "resourceNo": "SH-002",
+        "totalQty": 5000,
+        "locationId": 6,
+        "name": "昭通市应急避难广场",
+        "availableQty": 5000,
+        "category": "shelter"
+      }
+    },
+    {
+      "id": 15,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 10,
+        "resourceNo": "SH-003",
+        "totalQty": 3000,
+        "locationId": 11,
+        "name": "红河州一中避难所",
+        "availableQty": 3000,
+        "category": "shelter"
+      }
+    },
+    {
+      "id": 16,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 11,
+        "resourceNo": "MAT-001",
+        "totalQty": 5000,
+        "locationId": 2,
+        "name": "救援帐篷",
+        "availableQty": 4200,
+        "category": "material"
+      }
+    },
+    {
+      "id": 17,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 12,
+        "resourceNo": "MAT-002",
+        "totalQty": 100000,
+        "locationId": 2,
+        "name": "应急饮用水",
+        "availableQty": 85000,
+        "category": "material"
+      }
+    },
+    {
+      "id": 18,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 13,
+        "resourceNo": "MAT-003",
+        "totalQty": 8000,
+        "locationId": 6,
+        "name": "救灾棉被",
+        "availableQty": 6500,
+        "category": "material"
+      }
+    },
+    {
+      "id": 19,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 14,
+        "resourceNo": "MAT-004",
+        "totalQty": 50000,
+        "locationId": 2,
+        "name": "压缩饼干",
+        "availableQty": 48000,
+        "category": "material"
+      }
+    },
+    {
+      "id": 20,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 15,
+        "resourceNo": "EQ-001",
+        "totalQty": 20,
+        "locationId": 2,
+        "name": "生命探测仪",
+        "availableQty": 18,
+        "category": "equipment"
+      }
+    },
+    {
+      "id": 21,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "resourceId": 16,
+        "resourceNo": "EQ-002",
+        "totalQty": 15,
+        "locationId": 3,
+        "name": "大型挖掘机",
+        "availableQty": 12,
+        "category": "equipment"
+      }
+    },
+    {
+      "id": 22,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 4,
+        "orderNo": "DO-20260720-001",
+        "dispatchQty": 200,
+        "dispatchOrderId": 1,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 23,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 11,
+        "orderNo": "DO-20260720-002",
+        "dispatchQty": 500,
+        "dispatchOrderId": 2,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 24,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 12,
+        "orderNo": "DO-20260720-003",
+        "dispatchQty": 10000,
+        "dispatchOrderId": 3,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 25,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 6,
+        "orderNo": "DO-20260721-001",
+        "dispatchQty": 100,
+        "dispatchOrderId": 4,
+        "incidentId": 3,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 26,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 7,
+        "orderNo": "DO-20260721-002",
+        "dispatchQty": 50,
+        "dispatchOrderId": 5,
+        "incidentId": 3,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 27,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 5,
+        "orderNo": "DO-20260722-001",
+        "dispatchQty": 80,
+        "dispatchOrderId": 6,
+        "incidentId": 6,
+        "status": "pending"
+      }
+    },
+    {
+      "id": 28,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 11,
+        "orderNo": "DO-20260722-002",
+        "dispatchQty": 300,
+        "dispatchOrderId": 7,
+        "incidentId": 7,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 29,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 4,
+        "orderNo": "DO-20260724-001",
+        "dispatchQty": 30,
+        "dispatchOrderId": 8,
+        "incidentId": 12,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 30,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 5,
+        "orderNo": "DO-20260725-001",
+        "dispatchQty": 120,
+        "dispatchOrderId": 9,
+        "incidentId": 15,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 31,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 7,
+        "orderNo": "DO-20260725-002",
+        "dispatchQty": 60,
+        "dispatchOrderId": 10,
+        "incidentId": 15,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 32,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 4,
+        "orderNo": "DO-20260726-001",
+        "dispatchQty": 150,
+        "dispatchOrderId": 11,
+        "incidentId": 20,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 33,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 12,
+        "orderNo": "DO-20260726-002",
+        "dispatchQty": 5000,
+        "dispatchOrderId": 12,
+        "incidentId": 20,
+        "status": "pending"
+      }
+    },
+    {
+      "id": 34,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 6,
+        "orderNo": "DO-20260726-003",
+        "dispatchQty": 50,
+        "dispatchOrderId": 13,
+        "incidentId": 18,
+        "status": "pending"
+      }
+    },
+    {
+      "id": 35,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 4,
+        "orderNo": "DO-20250720-001",
+        "dispatchQty": 200,
+        "dispatchOrderId": 14,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 36,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 11,
+        "orderNo": "DO-20250720-002",
+        "dispatchQty": 500,
+        "dispatchOrderId": 15,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 37,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 12,
+        "orderNo": "DO-20250720-003",
+        "dispatchQty": 10000,
+        "dispatchOrderId": 16,
+        "incidentId": 1,
+        "status": "completed"
+      }
+    },
+    {
+      "id": 38,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 6,
+        "orderNo": "DO-20250721-001",
+        "dispatchQty": 100,
+        "dispatchOrderId": 17,
+        "incidentId": 2,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 39,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 7,
+        "orderNo": "DO-20250721-002",
+        "dispatchQty": 50,
+        "dispatchOrderId": 18,
+        "incidentId": 2,
+        "status": "executing"
+      }
+    },
+    {
+      "id": 40,
+      "labels": [
+        "DispatchOrder"
+      ],
+      "properties": {
+        "resourceId": 5,
+        "orderNo": "DO-20250723-001",
+        "dispatchQty": 80,
+        "dispatchOrderId": 19,
+        "incidentId": 4,
+        "status": "pending"
+      }
+    },
+    {
+      "id": 430,
+      "labels": [
+        "Incident"
+      ],
+      "properties": {
+        "incidentNo": "INC-1785011116256",
+        "riskLevel": "低",
+        "disasterType": "地震",
+        "affectedPeople": 0,
+        "name": "昆明呈贡雨花街道地震",
+        "state": 1,
+        "riskLevelValue": 1,
+        "incidentId": 1,
+        "title": "昆明呈贡雨花街道地震",
+        "status": "已确认"
+      }
+    }
+  ],
+  "triples": [
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "位于",
+      "object": "昆明呈贡呈贡雨花街道受灾点",
+      "object_type": "PlaceName"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "是",
+      "object": "地震",
+      "object_type": "DisasterType"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "具备",
+      "object": "低",
+      "object_type": "RiskLevel"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "涉及",
+      "object": "受灾57人",
+      "object_type": "AffectedCount"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省消防救援总队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "救援帐篷",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "应急饮用水",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省地质灾害应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省医疗应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省矿山应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "救援帐篷",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省消防救援总队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省矿山应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省医疗应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省消防救援总队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "应急饮用水",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省地质灾害应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省消防救援总队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "救援帐篷",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "应急饮用水",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省地质灾害应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省医疗应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "调度给",
+      "object": "昆明呈贡雨花街道地震",
+      "object_type": "Incident"
+    },
+    {
+      "subject": null,
+      "subject_type": "DispatchOrder",
+      "predicate": "分配",
+      "object": "云南省矿山应急救援队",
+      "object_type": "Resource"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "是",
+      "object": "地震",
+      "object_type": "DisasterType"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "具备",
+      "object": "低",
+      "object_type": "RiskLevel"
+    },
+    {
+      "subject": "昆明呈贡雨花街道地震",
+      "subject_type": "Incident",
+      "predicate": "涉及",
+      "object": "受灾0人",
+      "object_type": "AffectedCount"
+    }
+  ],
+  "total_nodes": 42,
+  "total_triples": 33
+}

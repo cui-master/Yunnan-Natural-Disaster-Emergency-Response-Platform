@@ -1,0 +1,2 @@
+
+e675edadd2126b729a6d6b87109f6c9f0dcdbcb9	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc","integrity":null,"time":1784966098516,"size":"262","metadata":{"time":1784966098516,"url":"http://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:55 GMT","location":"https://registry.npmmirror.com/@parcel%2fwatcher-linux-arm-glibc"},"options":{"compress":true},"status":301}}

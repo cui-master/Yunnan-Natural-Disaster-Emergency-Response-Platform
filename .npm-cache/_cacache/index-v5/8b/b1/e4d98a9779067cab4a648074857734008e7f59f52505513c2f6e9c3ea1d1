@@ -1,0 +1,2 @@
+
+312b6bf6c40404440ceb1069839b4de1fe2a6532	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/function-bind","integrity":null,"time":1784966097783,"size":"262","metadata":{"time":1784966097783,"url":"http://registry.npmmirror.com/function-bind","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:54 GMT","location":"https://registry.npmmirror.com/function-bind"},"options":{"compress":true},"status":301}}

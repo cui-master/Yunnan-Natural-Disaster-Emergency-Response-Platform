@@ -1,0 +1,2 @@
+
+1fa60fef2f27577f1e135f4813a2d21a70afce15	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@floating-ui%2futils","integrity":null,"time":1784966097339,"size":"262","metadata":{"time":1784966097339,"url":"http://registry.npmmirror.com/@floating-ui%2futils","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:54 GMT","location":"https://registry.npmmirror.com/@floating-ui%2futils"},"options":{"compress":true},"status":301}}

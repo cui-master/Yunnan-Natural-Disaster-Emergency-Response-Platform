@@ -1,0 +1,2 @@
+
+21a60280471c7e0f04088fafa1c88420d9933437	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/get-proto","integrity":null,"time":1784966097913,"size":"262","metadata":{"time":1784966097913,"url":"http://registry.npmmirror.com/get-proto","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:54 GMT","location":"https://registry.npmmirror.com/get-proto"},"options":{"compress":true},"status":301}}

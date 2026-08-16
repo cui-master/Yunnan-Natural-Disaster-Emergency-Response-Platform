@@ -1,0 +1,44 @@
+# 环境变量与密钥（含 Docker .env）
+.env
+.env.local
+.env.*.local
+
+# Docker
+*.tar
+
+# 日志
+*.log
+logs/
+backend-runtime.log
+
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# 系统
+.DS_Store
+Thumbs.db
+
+# 依赖与构建产物
+node_modules/
+target/
+dist/
+build/
+.venv/
+.venv_lib/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*.class
+*.so
+*.jar
+.Python
+
+# Trae 工作区
+.workbuddy/
+
+# 上传文件
+uploads/

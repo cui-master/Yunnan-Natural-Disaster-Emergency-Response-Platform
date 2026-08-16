@@ -1,0 +1,11 @@
+.venv/
+.venv_lib/
+.idea/
+__pycache__/
+*.pyc
+logs/
+*.log
+.env
+tests/
+verify.py
+pytest.ini

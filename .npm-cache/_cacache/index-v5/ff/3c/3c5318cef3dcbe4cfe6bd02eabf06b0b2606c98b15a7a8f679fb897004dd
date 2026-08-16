@@ -1,0 +1,2 @@
+
+e20596e20cbb27aff322409d54932213125a8498	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/keycharm","integrity":null,"time":1784966090724,"size":"262","metadata":{"time":1784966090724,"url":"http://registry.npmmirror.com/keycharm","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:47 GMT","location":"https://registry.npmmirror.com/keycharm"},"options":{"compress":true},"status":301}}

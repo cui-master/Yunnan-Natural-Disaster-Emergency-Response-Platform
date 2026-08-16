@@ -1,0 +1,2 @@
+
+68f1ec1a4258edde8678bdbc4f9460f610e7c620	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/hasown","integrity":null,"time":1784966097139,"size":"262","metadata":{"time":1784966097138,"url":"http://registry.npmmirror.com/hasown","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:53 GMT","location":"https://registry.npmmirror.com/hasown"},"options":{"compress":true},"status":301}}

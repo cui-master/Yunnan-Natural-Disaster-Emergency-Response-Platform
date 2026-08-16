@@ -1,0 +1,2 @@
+
+f94eb30525089c9a45b8611203b5c6e1d2735d6e	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/is-extglob","integrity":null,"time":1784966099006,"size":"262","metadata":{"time":1784966099006,"url":"http://registry.npmmirror.com/is-extglob","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:55 GMT","location":"https://registry.npmmirror.com/is-extglob"},"options":{"compress":true},"status":301}}

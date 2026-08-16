@@ -1,0 +1,2 @@
+
+c58eb8682bd3b4d7cd70fab9f7b24609d771eda9	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/vite","integrity":null,"time":1784966092159,"size":"262","metadata":{"time":1784966092158,"url":"http://registry.npmmirror.com/vite","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:48 GMT","location":"https://registry.npmmirror.com/vite"},"options":{"compress":true},"status":301}}

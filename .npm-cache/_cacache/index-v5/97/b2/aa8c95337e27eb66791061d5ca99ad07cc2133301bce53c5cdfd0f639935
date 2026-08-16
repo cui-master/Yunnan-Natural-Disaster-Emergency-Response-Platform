@@ -1,0 +1,2 @@
+
+d5739a55b8ed012f4b7fe56b16cadc74b1c219a6	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/element-plus","integrity":null,"time":1784966089417,"size":"262","metadata":{"time":1784966089416,"url":"http://registry.npmmirror.com/element-plus","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:46 GMT","location":"https://registry.npmmirror.com/element-plus"},"options":{"compress":true},"status":301}}

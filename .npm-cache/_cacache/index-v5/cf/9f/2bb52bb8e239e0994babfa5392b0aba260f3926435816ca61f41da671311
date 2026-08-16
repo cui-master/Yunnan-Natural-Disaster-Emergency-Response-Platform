@@ -1,0 +1,2 @@
+
+997f0f742bcae5bd48c66586664228a4f5b748fe	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/detect-libc","integrity":null,"time":1784966098504,"size":"262","metadata":{"time":1784966098503,"url":"http://registry.npmmirror.com/detect-libc","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:55 GMT","location":"https://registry.npmmirror.com/detect-libc"},"options":{"compress":true},"status":301}}

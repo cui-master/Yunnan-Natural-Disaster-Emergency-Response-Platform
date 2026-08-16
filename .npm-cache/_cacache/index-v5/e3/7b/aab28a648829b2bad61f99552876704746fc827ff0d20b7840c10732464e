@@ -1,0 +1,2 @@
+
+a1ebcb1e5dfd871b9db21ed41a9af3ef63806de8	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@esbuild%2fandroid-arm","integrity":null,"time":1784966099103,"size":"262","metadata":{"time":1784966099102,"url":"http://registry.npmmirror.com/@esbuild%2fandroid-arm","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:55 GMT","location":"https://registry.npmmirror.com/@esbuild%2fandroid-arm"},"options":{"compress":true},"status":301}}

@@ -1,0 +1,2 @@
+
+df43bcd2bbaa2167f7171eb5fa76011ec7b1184e	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/normalize-wheel-es","integrity":null,"time":1784966096471,"size":"262","metadata":{"time":1784966096471,"url":"http://registry.npmmirror.com/normalize-wheel-es","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:53 GMT","location":"https://registry.npmmirror.com/normalize-wheel-es"},"options":{"compress":true},"status":301}}

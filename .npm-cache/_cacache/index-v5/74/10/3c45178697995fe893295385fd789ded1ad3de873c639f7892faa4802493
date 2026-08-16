@@ -1,0 +1,2 @@
+
+991de3ab1af52987baec66ca061885932127e880	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/vue-echarts","integrity":null,"time":1784966089839,"size":"262","metadata":{"time":1784966089839,"url":"http://registry.npmmirror.com/vue-echarts","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:46 GMT","location":"https://registry.npmmirror.com/vue-echarts"},"options":{"compress":true},"status":301}}

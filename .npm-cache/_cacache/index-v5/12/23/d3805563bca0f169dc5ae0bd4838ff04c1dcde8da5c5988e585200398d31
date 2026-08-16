@@ -1,0 +1,2 @@
+
+88e16ac55322b6cf47b3b64135c8259412eac6b4	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/vis-network","integrity":null,"time":1784966090243,"size":"262","metadata":{"time":1784966090243,"url":"http://registry.npmmirror.com/vis-network","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:46 GMT","location":"https://registry.npmmirror.com/vis-network"},"options":{"compress":true},"status":301}}

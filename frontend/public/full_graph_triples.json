@@ -1,0 +1,4398 @@
+{
+  "graph_name" : "云南自然灾害应急资源知识图谱",
+  "version" : "1.0",
+  "total_triples" : 732,
+  "triples" : [ {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "编号为",
+    "object" : "1",
+    "object_type" : "受灾点编号"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "发生时间",
+    "object" : "2024-07-17 03:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "上报时间",
+    "object" : "2024-07-17 03:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "审核时间",
+    "object" : "2024-07-17 04:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "审核同意上报时间",
+    "object" : "2024-07-17 04:30:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "位于",
+    "object" : "昆明市东川区铜都街道",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "是",
+    "object" : "泥石流灾害风险",
+    "object_type" : "灾害类型"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "具备",
+    "object" : "4",
+    "object_type" : "危险等级"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "涉及",
+    "object" : "1200",
+    "object_type" : "受灾人数"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "编号为",
+    "object" : "5",
+    "object_type" : "受灾点编号"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "发生时间",
+    "object" : "2024-07-18 04:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "上报时间",
+    "object" : "2024-07-18 05:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "审核时间",
+    "object" : "2024-07-18 08:00:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "审核同意上报时间",
+    "object" : "2024-07-18 08:30:00",
+    "object_type" : "时间"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "位于",
+    "object" : "普洱市墨江县联珠镇",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "是",
+    "object" : "暴雨灾害风险",
+    "object_type" : "灾害类型"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "具备",
+    "object" : "2",
+    "object_type" : "危险等级"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "涉及",
+    "object" : "740",
+    "object_type" : "受灾人数"
+  }, {
+    "subject" : "云南省省级应急物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "昆明市呈贡区经开区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "云南省省级应急物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "昭通市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "昭通市昭阳区凤凰街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "昭通市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "大理州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "大理州大理市下关街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "大理州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "怒江州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "怒江州泸水市六库街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "怒江州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "保山市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "保山市隆阳区永昌街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "保山市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "红河州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "红河州蒙自市文澜街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "红河州应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "曲靖市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "曲靖市麒麟区南宁街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "曲靖市应急物资储备分库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "东川区县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "昆明市东川区桂苑街",
+    "object_type" : "地点"
+  }, {
+    "subject" : "东川区县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "彝良县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "昭通市彝良县角奎街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "彝良县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "贡山县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "怒江州贡山县茨开镇",
+    "object_type" : "地点"
+  }, {
+    "subject" : "贡山县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "漾濞县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "大理州漾濞县苍山西镇",
+    "object_type" : "地点"
+  }, {
+    "subject" : "漾濞县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "会泽县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "位于",
+    "object" : "曲靖市会泽县古城街道",
+    "object_type" : "地点"
+  }, {
+    "subject" : "会泽县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "拥有",
+    "object" : "应急物资总类",
+    "object_type" : "物资"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "帐篷",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "帐篷",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "帐篷",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "500",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "折叠床",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "折叠床",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "折叠床",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "800",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "睡袋",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "睡袋",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "睡袋",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "1200",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "简易厕所",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "简易厕所",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "简易厕所",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "60",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "防寒毛毯",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "防寒毛毯",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "防寒毛毯",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "2000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "防潮垫",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "防潮垫",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "防潮垫",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "1500",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "移动卫生间",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "移动卫生间",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "移动卫生间",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "35",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "垃圾桶",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "垃圾桶",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "垃圾桶",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "300",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "救生衣",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "救生衣",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "救生衣",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "2000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "橡皮艇",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "橡皮艇",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "橡皮艇",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "120",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "编织沙袋",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "编织沙袋",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "编织沙袋",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "50000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "抽水泵",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "抽水泵",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "抽水泵",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "150",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "防水雨衣",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "防水雨衣",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "防水雨衣",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "3000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "雨靴",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "雨靴",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "雨靴",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "2500",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "救生绳",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "救生绳",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "救生绳",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "800",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "土工布",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "土工布",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "土工布",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "6000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "救生圈",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "救生圈",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "暴雨/洪涝/山洪灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "救生圈",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "400",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "撬棍",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "撬棍",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "撬棍",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "300",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "切割机",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "切割机",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "切割机",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "80",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "安全帽",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "安全帽",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "安全帽",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "1500",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "滑坡监测简易测桩",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "滑坡监测简易测桩",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "滑坡监测简易测桩",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "200",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "生命探测仪",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "生命探测仪",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "生命探测仪",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "25",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "支撑顶杆",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "支撑顶杆",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "支撑顶杆",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "180",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "液压破拆工具组",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "液压破拆工具组",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "液压破拆工具组",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "45",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "安全绳",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "安全绳",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "安全绳",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "600",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "裂缝观测尺",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "裂缝观测尺",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "滑坡/泥石流/崩塌/地震灾害",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "裂缝观测尺",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "120",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "手电筒",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "手电筒",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "手电筒",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "3000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "发电机",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "发电机",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "发电机",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "120",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "照明灯",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "照明灯",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "照明灯",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "400",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "卫星电话",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "卫星电话",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "卫星电话",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "60",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "急救包",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "急救包",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "急救包",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "2500",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "担架",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "担架",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "担架",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "200",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "瓶装饮用水",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "瓶装饮用水",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "瓶装饮用水",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "100000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "方便食品",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "方便食品",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "方便食品",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "80000",
+    "object_type" : "数量"
+  }, {
+    "subject" : "应急物资总类",
+    "subject_type" : "物资",
+    "predicate" : "包含",
+    "object" : "警示标志",
+    "object_type" : "物资单品"
+  }, {
+    "subject" : "警示标志",
+    "subject_type" : "物资单品",
+    "predicate" : "适用于",
+    "object" : "通用",
+    "object_type" : "适用灾害"
+  }, {
+    "subject" : "警示标志",
+    "subject_type" : "物资单品",
+    "predicate" : "有",
+    "object" : "600",
+    "object_type" : "数量"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市官渡区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "50000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "地震灾害风险、洪涝灾害风险、滑坡灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市五华区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "地质救援队",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "30000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "滑坡灾害风险、泥石流灾害风险、崩塌灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市西山区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "医疗队伍",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "20000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "通用",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市呈贡区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "森林消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "35000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "洪涝灾害风险、地震灾害风险、滑坡灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市盘龙区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "40000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "洪涝灾害风险、泥石流灾害风险、地震灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昭通市昭阳区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "25000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "滑坡灾害风险、地震灾害风险、洪涝灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "大理州大理市",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "28000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "地震灾害风险、山洪灾害风险、崩塌灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "怒江州泸水市",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "地方综合救援队",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "12000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "山洪灾害风险、泥石流灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "保山市隆阳区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "22000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "崩塌灾害风险、地震灾害风险、洪涝灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "红河州蒙自市",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "26000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "暴雨灾害风险、洪涝灾害风险、地震灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "忙碌",
+    "object_type" : "状态"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "曲靖市麒麟区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "27000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "洪涝灾害风险、滑坡灾害风险、地震灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "丽江市古城区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "消防",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "23000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "地震灾害风险、山洪灾害风险、滑坡灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市东川区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "地方综合救援队",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "8000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "泥石流灾害风险、洪涝灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昭通市彝良县",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "地质救援队",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "6000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "滑坡灾害风险、崩塌灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "忙碌",
+    "object_type" : "状态"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "怒江州贡山县",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "地方综合救援队",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "5000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "山洪灾害风险、泥石流灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市盘龙区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "民间救援队伍",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "15000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "山洪灾害风险、洪涝灾害风险、地震灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "忙碌",
+    "object_type" : "状态"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昆明市五华区",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "民间救援队伍",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "10000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "通用",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "位于",
+    "object" : "昭通市镇雄县",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "是",
+    "object" : "矿山救援",
+    "object_type" : "队伍类型"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "最大运载重量",
+    "object" : "18000",
+    "object_type" : "最大运载重量"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "擅长",
+    "object" : "崩塌灾害风险、滑坡灾害风险",
+    "object_type" : "擅长灾害"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "状态",
+    "object" : "空闲",
+    "object_type" : "状态"
+  }, {
+    "subject" : "昆明市体育中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "昆明市体育中心",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "昆明市体育中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昆明市呈贡区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "昆明市体育中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "50000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "昆明市体育中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "昭通市望海公园应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "望海公园应急避难广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "昭通市望海公园应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昭通市昭阳区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "昭通市望海公园应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "20000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "昭通市望海公园应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "大理州全民健身中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "大理州全民健身中心",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "大理州全民健身中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "大理州大理市",
+    "object_type" : "地点"
+  }, {
+    "subject" : "大理州全民健身中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "30000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "大理州全民健身中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "怒江州六库公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "六库中央公园",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "怒江州六库公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "怒江州泸水市",
+    "object_type" : "地点"
+  }, {
+    "subject" : "怒江州六库公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "12000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "怒江州六库公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "保山市三馆文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "三馆文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "保山市三馆文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "保山市隆阳区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "保山市三馆文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "18000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "保山市三馆文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "红河州州政府广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "红河州政府广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "红河州州政府广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "红河州蒙自市",
+    "object_type" : "地点"
+  }, {
+    "subject" : "红河州州政府广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "25000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "红河州州政府广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "曲靖市珠江源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "珠江源广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "曲靖市珠江源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "曲靖市麒麟区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "曲靖市珠江源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "22000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "曲靖市珠江源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "丽江市红太阳广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "红太阳广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "丽江市红太阳广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "丽江市古城区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "丽江市红太阳广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "15000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "丽江市红太阳广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "东川区和平广场应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "和平广场应急避难场所",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "东川区和平广场应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昆明市东川区",
+    "object_type" : "地点"
+  }, {
+    "subject" : "东川区和平广场应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "8000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "东川区和平广场应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "彝良县行政中心避难广场",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "彝良县行政中心广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "彝良县行政中心避难广场",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昭通市彝良县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "彝良县行政中心避难广场",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "5000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "彝良县行政中心避难广场",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "贡山县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "贡山县民族文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "贡山县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "怒江州贡山县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "贡山县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "3000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "贡山县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "漾濞县人和广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "漾濞县人和广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "漾濞县人和广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "大理州漾濞县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "漾濞县人和广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "4000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "漾濞县人和广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "会泽县会泽公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "会泽公园",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "会泽县会泽公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "曲靖市会泽县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "会泽县会泽公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "6000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "会泽县会泽公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "腾冲市腾越文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "腾越文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "腾冲市腾越文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "保山市腾冲市",
+    "object_type" : "地点"
+  }, {
+    "subject" : "腾冲市腾越文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "12000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "腾冲市腾越文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "元阳县南沙广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "南沙民族广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "元阳县南沙广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "红河州元阳县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "元阳县南沙广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "4500",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "元阳县南沙广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "禄劝县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "禄劝民族文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "禄劝县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昆明市禄劝县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "禄劝县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "5500",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "禄劝县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "巧家县堂琅广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "堂琅文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "巧家县堂琅广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昭通市巧家县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "巧家县堂琅广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "4200",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "巧家县堂琅广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "镇雄县赤水源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "赤水源广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "镇雄县赤水源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "昭通市镇雄县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "镇雄县赤水源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "7000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "镇雄县赤水源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "香格里拉市坛城广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "坛城文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "香格里拉市坛城广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "迪庆州香格里拉市",
+    "object_type" : "地点"
+  }, {
+    "subject" : "香格里拉市坛城广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "8500",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "香格里拉市坛城广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "德钦县升平广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "升平镇文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "德钦县升平广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "迪庆州德钦县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "德钦县升平广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "2000",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "德钦县升平广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "澜沧县佛房广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "佛房文化广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "澜沧县佛房广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "普洱市澜沧县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "澜沧县佛房广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "3800",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "澜沧县佛房广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "墨江县太阳广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "是",
+    "object" : "太阳广场",
+    "object_type" : "场所名称"
+  }, {
+    "subject" : "墨江县太阳广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "位于",
+    "object" : "普洱市墨江县",
+    "object_type" : "地点"
+  }, {
+    "subject" : "墨江县太阳广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "最大容纳人数",
+    "object" : "4800",
+    "object_type" : "最大容纳人数"
+  }, {
+    "subject" : "墨江县太阳广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "已容纳人数",
+    "object" : "0",
+    "object_type" : "已容纳人数"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G56",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "杭瑞高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "80",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G85",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "银昆高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "75",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G8511",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "昆磨高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "78",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G78",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "汕昆高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "82",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G80",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "广昆高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "85",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G5615",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "天猴高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "90",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G0613",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "西丽高速公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "高速公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "49000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "92",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G320",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "320国道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "国道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "30000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "110",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G213",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "213国道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "国道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "30000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "105",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G326",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "326国道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "国道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "25000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "130",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G214",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "214国道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "国道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "30000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "115",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "G353",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "353国道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "国道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "G353国道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "125",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S101",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "昆绥二级公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "二级公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "30000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "100",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S20",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "昭麻二级公路",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "二级公路",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "120",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S228",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "保山-贡山省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "15000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "150",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S312",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "大理-漾濞省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "115",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S201",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "昭通-彝良省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "18000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "125",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S303",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "会泽-巧家省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "110",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S214",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "元阳-绿春省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "15000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "140",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S307",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "禄劝-巧家省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "18000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "130",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S226",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "香格里拉-虎跳峡省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "120",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S309",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "澜沧-孟连省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "15000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "138",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S222",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "墨江-江城省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "18000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "128",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S232",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "宾川-祥云省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "20000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S232省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "112",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X001",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "东川-汤丹县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "10000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "150",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X002",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "彝良-洛泽河县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "180",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X003",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "贡山-丙中洛县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "160",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X004",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "漾濞-苍山西县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "10000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "145",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X005",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "会泽-纸厂县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "155",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X006",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "腾冲-明光县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "10000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "148",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X007",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "元阳-新街县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "152",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X008",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "禄劝-则黑县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "半阻断",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "165",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X009",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "巧家-大寨县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "158",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X010",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "镇雄-坡头县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "拥堵",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "170",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X011",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "香格里拉-虎跳峡县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "10000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "142",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "X012",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "德钦-奔子栏县道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "县道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "8000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "X012县道德钦线",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "168",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G8511昆磨高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G78汕昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G80广昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G320国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S312省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S20昭麻二级公路",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G326国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G326国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G8511昆磨高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G213国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G213国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G8511昆磨高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G80广昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G8511昆磨高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S230省道111",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G320国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G320国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S201省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S20昭麻二级公路",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S307省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X001县道东川线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X002县道彝良线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X002县道彝良线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S201省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X003县道贡山线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X003县道贡山线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X004县道漾濞线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X004县道漾濞线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S312省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X005县道会泽线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X005县道会泽线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X006县道腾冲线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S230省道111",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X007县道元阳线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X007县道元阳线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S214省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X008县道禄劝线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X008县道禄劝线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S307省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X009县道巧家线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X009县道巧家线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X010县道镇雄线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S205省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X011县道香格里拉线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X011县道香格里拉线",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S226省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "S226省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S226省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G214国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G214国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "G0613西丽高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "东川区铜都街道受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "临近",
+    "object" : "X001县道东川线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "X001县道东川线",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "东川区铜都街道受灾点",
+    "object_type" : "受灾点"
+  }, {
+    "subject" : "墨江县联珠镇受灾点",
+    "subject_type" : "受灾点",
+    "predicate" : "临近",
+    "object" : "S222省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "墨江县联珠镇受灾点",
+    "object_type" : "受灾点"
+  }, {
+    "subject" : "云南省省级应急物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南省省级应急物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "昭通市应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昭通市应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "大理州应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "大理州应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "怒江州应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "怒江州应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "保山市应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "保山市应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "红河州应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G80广昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "红河州应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "曲靖市应急物资储备分库",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G78汕昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "曲靖市应急物资储备分库",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "东川区县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "东川区县级物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "彝良县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "S20昭麻二级公路",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "彝良县县级物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "贡山县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "贡山县县级物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "漾濞县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "S312省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "漾濞县县级物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "会泽县县级物资储备库",
+    "subject_type" : "物资仓库",
+    "predicate" : "临近",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "会泽县县级物资储备库",
+    "object_type" : "物资仓库"
+  }, {
+    "subject" : "云南省消防救援总队特勤支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南省消防救援总队特勤支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "云南省地质灾害应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南省地质灾害应急救援队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "云南省医疗应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G8511昆磨高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G8511昆磨高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南省医疗应急救援队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "云南省森林消防总队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南省森林消防总队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "昆明市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昆明市消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "昭通市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昭通市消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "大理州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "大理州消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "怒江州应急救援大队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "怒江州应急救援大队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "保山市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "保山市消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "红河州消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G80广昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "红河州消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "曲靖市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G78汕昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "曲靖市消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "丽江市消防救援支队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G0613西丽高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "丽江市消防救援支队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "东川区应急抢险队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "东川区应急抢险队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "彝良县地质灾害应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S201省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S201省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "彝良县地质灾害应急队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "贡山县山地应急队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "贡山县山地应急队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "云南蓝天救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南蓝天救援队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "云南红十字应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "云南红十字应急救援队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "昭通市矿山应急救援队",
+    "subject_type" : "救援队伍",
+    "predicate" : "临近",
+    "object" : "S205省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "昆明市体育中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昆明市体育中心避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "昭通市望海公园应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G85银昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G85银昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昭通市望海公园应急避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "大理州全民健身中心避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G56杭瑞高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G56杭瑞高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "大理州全民健身中心避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "怒江州六库公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "怒江州六库公园避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "保山市三馆文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G5615天猴高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G5615天猴高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "保山市三馆文化广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "红河州州政府广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G80广昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G80广昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "红河州州政府广场避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "曲靖市珠江源广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G78汕昆高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G78汕昆高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "曲靖市珠江源广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "丽江市红太阳广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G0613西丽高速",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G0613西丽高速",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "丽江市红太阳广场避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "东川区和平广场应急避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S101昆绥线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S101昆绥线",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "东川区和平广场应急避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "彝良县行政中心避难广场",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S20昭麻二级公路",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S20昭麻二级公路",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "彝良县行政中心避难广场",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "贡山县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S228省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S228省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "贡山县民族文化广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "漾濞县人和广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S312省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S312省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "漾濞县人和广场避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "会泽县会泽公园避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "会泽县会泽公园避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "腾冲市腾越文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S230省道111",
+    "object_type" : "道路"
+  }, {
+    "subject" : "元阳县南沙广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S214省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S214省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "元阳县南沙广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "禄劝县民族文化广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S307省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S307省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "禄劝县民族文化广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "巧家县堂琅广场避难场所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S303省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S303省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "巧家县堂琅广场避难场所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "香格里拉市坛城广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G214国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "香格里拉市坛城广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "德钦县升平广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "G214国道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G214国道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "德钦县升平广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "澜沧县佛房广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S309省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S309省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "澜沧县佛房广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "墨江县太阳广场避难所",
+    "subject_type" : "避难场所",
+    "predicate" : "临近",
+    "object" : "S222省道",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S222省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "墨江县太阳广场避难所",
+    "object_type" : "避难场所"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S205",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "镇雄-威信省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "拥堵",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "15000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "145",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X010县道镇雄线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S205省道",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "昭通市矿山应急救援队",
+    "object_type" : "救援队伍"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "编号为",
+    "object" : "9",
+    "object_type" : "受灾点编号"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "发生时间",
+    "object" : "",
+    "object_type" : "时间"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "上报时间",
+    "object" : "2026-07-27 09:23:39",
+    "object_type" : "时间"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "审核同意上报时间",
+    "object" : "2026-07-27 09:31:17",
+    "object_type" : "时间"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "位于",
+    "object" : "普洱墨江墨江联珠镇",
+    "object_type" : "地点名称"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "是",
+    "object" : "滑坡灾害风险",
+    "object_type" : "灾害类型"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "具备",
+    "object" : "3",
+    "object_type" : "危险等级"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "涉及",
+    "object" : "32",
+    "object_type" : "受灾人数"
+  }, {
+    "subject" : "普洱市墨江哈尼族山体滑坡灾情",
+    "subject_type" : "受灾点",
+    "predicate" : "临近",
+    "object" : "G3国道墨江",
+    "object_type" : "道路"
+  }, {
+    "subject" : "G3国道墨江",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "普洱市墨江哈尼族山体滑坡灾情",
+    "object_type" : "受灾点"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "编号为",
+    "object" : "S230",
+    "object_type" : "道路编号"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "命名为",
+    "object" : "腾冲-明光省道",
+    "object_type" : "道路名称"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "属于",
+    "object" : "省道",
+    "object_type" : "道路等级"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "当前通行",
+    "object" : "畅通",
+    "object_type" : "通行状态"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "承载上限",
+    "object" : "15000",
+    "object_type" : "承载上限"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "通行代价",
+    "object" : "135",
+    "object_type" : "距离成本"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "连通",
+    "object" : "X006县道腾冲线",
+    "object_type" : "道路"
+  }, {
+    "subject" : "S230省道111",
+    "subject_type" : "道路",
+    "predicate" : "服务",
+    "object" : "腾冲市腾越文化广场避难所",
+    "object_type" : "避难场所"
+  } ]
+}

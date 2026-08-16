@@ -1,0 +1,2 @@
+
+bbd2cc42266f6e48daafbf74bd911026d36f5db1	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@rollup%2frollup-openbsd-x64","integrity":null,"time":1784966100447,"size":"262","metadata":{"time":1784966100446,"url":"http://registry.npmmirror.com/@rollup%2frollup-openbsd-x64","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:57 GMT","location":"https://registry.npmmirror.com/@rollup%2frollup-openbsd-x64"},"options":{"compress":true},"status":301}}

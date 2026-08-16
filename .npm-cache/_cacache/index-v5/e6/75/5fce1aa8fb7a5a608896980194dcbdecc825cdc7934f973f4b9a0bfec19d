@@ -1,0 +1,2 @@
+
+577e466d6eaac40cbecff0276ddd2bb2e6b0c4cf	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@vueuse%2fcore","integrity":null,"time":1784966096267,"size":"262","metadata":{"time":1784966096267,"url":"http://registry.npmmirror.com/@vueuse%2fcore","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:52 GMT","location":"https://registry.npmmirror.com/@vueuse%2fcore"},"options":{"compress":true},"status":301}}

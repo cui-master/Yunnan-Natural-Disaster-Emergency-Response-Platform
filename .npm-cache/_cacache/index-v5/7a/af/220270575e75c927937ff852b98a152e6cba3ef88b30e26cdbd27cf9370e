@@ -1,0 +1,2 @@
+
+5ffca0a2f2619e5bfe2a7968776a5a6016dd243a	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu","integrity":null,"time":1784966100051,"size":"262","metadata":{"time":1784966100051,"url":"http://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:56 GMT","location":"https://registry.npmmirror.com/@rollup%2frollup-win32-x64-gnu"},"options":{"compress":true},"status":301}}

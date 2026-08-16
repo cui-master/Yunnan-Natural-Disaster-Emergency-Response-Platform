@@ -1,0 +1,2 @@
+
+b4538c95e49e1cd6304646dc9e29d74877940e3d	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@vue%2fcomposition-api","integrity":null,"time":1784966089987,"size":"262","metadata":{"time":1784966089987,"url":"http://registry.npmmirror.com/@vue%2fcomposition-api","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:46 GMT","location":"https://registry.npmmirror.com/@vue%2fcomposition-api"},"options":{"compress":true},"status":301}}

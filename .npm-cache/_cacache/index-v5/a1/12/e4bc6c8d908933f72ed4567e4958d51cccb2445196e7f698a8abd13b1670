@@ -1,0 +1,2 @@
+
+dbb08459fd6971e95be13f17d42f1cd650671b6c	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64","integrity":null,"time":1784966099517,"size":"262","metadata":{"time":1784966099516,"url":"http://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:56 GMT","location":"https://registry.npmmirror.com/@rollup%2frollup-freebsd-arm64"},"options":{"compress":true},"status":301}}

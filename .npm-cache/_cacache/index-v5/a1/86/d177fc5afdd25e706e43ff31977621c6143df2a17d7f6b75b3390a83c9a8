@@ -1,0 +1,2 @@
+
+6499d3a2f7704d418f7fbc10ac71445f1690e4bd	{"key":"make-fetch-happen:request-cache:http://registry.npmmirror.com/es-errors","integrity":null,"time":1784966097776,"size":"262","metadata":{"time":1784966097776,"url":"http://registry.npmmirror.com/es-errors","reqHeaders":{"accept":"application/json"},"resHeaders":{"content-type":"text/html","date":"Sat, 25 Jul 2026 07:54:54 GMT","location":"https://registry.npmmirror.com/es-errors"},"options":{"compress":true},"status":301}}
